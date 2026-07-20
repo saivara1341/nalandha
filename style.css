@@ -6151,7 +6151,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   max-width: 1060px !important;   /* increased from 820px */
   width: 100% !important;
   margin-inline: auto !important;
-  padding-bottom: 5rem !important;
+  padding-bottom: 65vh !important;
   overflow: visible !important;
 }
 
@@ -7463,7 +7463,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
   .sticky-stack-container {
     gap: 1rem !important;
-    padding-bottom: 6rem !important;
+    padding-bottom: 60vh !important;
     overflow: visible !important;
     overflow-x: visible !important;
     overflow-y: visible !important;
@@ -7512,7 +7512,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     display: flex !important;
     flex-direction: column !important;
     gap: 1rem !important;
-    padding-bottom: 5rem !important;
+    padding-bottom: 40vh !important;
     overflow: visible !important;
     overflow-x: visible !important;
     overflow-y: visible !important;
