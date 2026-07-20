@@ -129,10 +129,10 @@
             </video>
 
             <!-- Video overlay wrapper for content to stay on top -->
-            <div style="position:relative; z-index:1; width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:2rem; background:rgba(10,10,13,0.2); box-sizing:border-box;">
+            <div style="position:relative; z-index:1; width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:2rem; background:rgba(10,10,13,0.2); box-sizing:border-box; margin-top:1.5rem;">
 
               <!-- School Logo + label bar (side by side) -->
-              <div class="hero-logo-bar">
+              <div class="hero-logo-bar hero-slide-in" style="animation-delay: 0.2s;">
                 <!-- Logo -->
                 <img src="assets/logo.jpg" alt="Nalanda High School Crest" class="hero-logo-img">
 
@@ -148,17 +148,31 @@
               </div>
 
               <!-- 50+ Expert Faculty bar -->
-              <div class="hero-faculty-bar" style="margin-top: 1rem; display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.96) !important; border: 1.5px solid rgba(191, 213, 143, 0.5) !important; border-radius: 999px !important; padding: 0.45rem 1.1rem !important; box-shadow: 0 4px 20px rgba(92, 120, 56, 0.12) !important; border-left: 4px solid #10b981 !important;">
-                <span class="fac-num" style="font-family: 'Inter', sans-serif; font-weight: 900; font-size: 1.05rem; color: #0d0d10; line-height: 1;">50+</span>
+              <div class="hero-slide-in" style="margin-top: 0.75rem; display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.96) !important; border: 1.5px solid rgba(191, 213, 143, 0.5) !important; border-radius: 999px !important; padding: 0.45rem 1.1rem !important; box-shadow: 0 4px 20px rgba(92, 120, 56, 0.12) !important; border-left: 4px solid #10b981 !important; animation-delay: 0.4s;">
+                <span style="font-family: 'Inter', sans-serif; font-weight: 900; font-size: 1.05rem; color: #0d0d10; line-height: 1;">50+</span>
                 <div style="width: 1px; height: 16px; background: rgba(191, 213, 143, 0.5); flex-shrink: 0;"></div>
-                <span class="fac-lbl" style="font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; color: #4b5563; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap;">Expert Faculty Team</span>
+                <span style="font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; color: #4b5563; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap;">Expert Faculty Team</span>
               </div>
 
               <!-- Smart Classrooms bar -->
-              <div class="hero-smart-bar" style="margin-top: 1rem; display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.96) !important; border: 1.5px solid rgba(191, 213, 143, 0.5) !important; border-radius: 999px !important; padding: 0.45rem 1.1rem !important; box-shadow: 0 4px 20px rgba(92, 120, 56, 0.12) !important; border-left: 4px solid #3b82f6 !important;">
-                <span class="smart-icon" style="display: inline-flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 1.05rem; line-height: 1;">🖥️</span>
+              <div class="hero-slide-in" style="margin-top: 0.75rem; display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.96) !important; border: 1.5px solid rgba(191, 213, 143, 0.5) !important; border-radius: 999px !important; padding: 0.45rem 1.1rem !important; box-shadow: 0 4px 20px rgba(92, 120, 56, 0.12) !important; border-left: 4px solid #3b82f6 !important; animation-delay: 0.6s;">
+                <span style="display: inline-flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 1.05rem; line-height: 1;">🖥️</span>
                 <div style="width: 1px; height: 16px; background: rgba(191, 213, 143, 0.5); flex-shrink: 0;"></div>
-                <span class="smart-lbl" style="font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; color: #4b5563; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap;">Interactive Smart Classrooms</span>
+                <span style="font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; color: #4b5563; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap;">Interactive Smart Classrooms</span>
+              </div>
+
+              <!-- 100% SSC Pass Rate bar (NEW) -->
+              <div class="hero-slide-in" style="margin-top: 0.75rem; display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.96) !important; border: 1.5px solid rgba(191, 213, 143, 0.5) !important; border-radius: 999px !important; padding: 0.45rem 1.1rem !important; box-shadow: 0 4px 20px rgba(92, 120, 56, 0.12) !important; border-left: 4px solid #f59e0b !important; animation-delay: 0.8s;">
+                <span style="font-family: 'Inter', sans-serif; font-weight: 900; font-size: 1.05rem; color: #0d0d10; line-height: 1;">100%</span>
+                <div style="width: 1px; height: 16px; background: rgba(191, 213, 143, 0.5); flex-shrink: 0;"></div>
+                <span style="font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; color: #4b5563; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap;">SSC Board Pass Rate</span>
+              </div>
+
+              <!-- 2500+ Alumni bar (NEW) -->
+              <div class="hero-slide-in" style="margin-top: 0.75rem; display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.96) !important; border: 1.5px solid rgba(191, 213, 143, 0.5) !important; border-radius: 999px !important; padding: 0.45rem 1.1rem !important; box-shadow: 0 4px 20px rgba(92, 120, 56, 0.12) !important; border-left: 4px solid #8b5cf6 !important; animation-delay: 1s;">
+                <span style="font-family: 'Inter', sans-serif; font-weight: 900; font-size: 1.05rem; color: #0d0d10; line-height: 1;">2,500+</span>
+                <div style="width: 1px; height: 16px; background: rgba(191, 213, 143, 0.5); flex-shrink: 0;"></div>
+                <span style="font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; color: #4b5563; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap;">Alumni Network</span>
               </div>
 
             </div>
@@ -169,6 +183,16 @@
           <div class="hero-photo-card hero-photo-accent">
             <img src="assets/smart_classroom.png" alt="Smart Classroom at Nalanda" loading="lazy">
             <div class="hero-accent-label">Smart Classrooms</div>
+          </div>
+          <!-- Floating accent card 2 -->
+          <div class="hero-photo-card hero-photo-accent-2">
+            <img src="assets/library.png" alt="Resource Library at Nalanda" loading="lazy">
+            <div class="hero-accent-label">Resource Library</div>
+          </div>
+          <!-- Floating accent card 3 -->
+          <div class="hero-photo-card hero-photo-accent-3">
+            <img src="assets/school_building.jpg" alt="Modern Campus at Nalanda" loading="lazy">
+            <div class="hero-accent-label">Modern Campus</div>
           </div>
         </div>
 
@@ -691,86 +715,95 @@
 
   </main>
 
-  <!-- Footer — Boxed Silver Line Design -->
-  <footer class="footer-boxed">
-
-    <!-- Top row: 3 boxes side by side -->
-    <div class="footer-boxes-wrap container">
-
-      <!-- Box 1: Brand -->
-      <div class="footer-box footer-box-brand">
-        <div class="footer-box-inner">
-          <a href="#home" class="footer-brand-logo" aria-label="Nalanda High School Home">
-            <img src="assets/logo.jpg" alt="Nalanda High School Crest" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0; border:2px solid rgba(255,255,255,0.2);">
-            <span class="footer-brand-name">Nalanda High School</span>
-          </a>
-          <p class="footer-brand-desc-new">Co-educational English Medium institution serving Nizamabad since 1980.</p>
-          <div class="footer-brand-badge-new">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+  <!-- Redesigned Premium Footer -->
+  <footer class="footer-premium scroll-reveal">
+    <div class="footer-glow-border"></div>
+    
+    <div class="container footer-grid-layout">
+      <!-- Column 1: School Info & Identity -->
+      <div class="footer-brand-column">
+        <a href="#home" class="footer-logo-wrap" aria-label="Nalanda High School Home">
+          <img src="assets/logo.jpg" alt="Nalanda High School Crest" class="footer-premium-logo">
+          <div class="footer-brand-text">
+            <span class="brand-title">Nalanda</span>
+            <span class="brand-subtitle">High School</span>
+          </div>
+        </a>
+        <p class="footer-premium-desc">
+          Co-educational English Medium institution shaping future leaders and nurturing academic excellence since 1980 in Nizamabad.
+        </p>
+        <div class="footer-premium-badges">
+          <div class="footer-badge-chip">
+            <span class="chip-dot-green"></span>
             Recognized by Govt. of Telangana
           </div>
-          <div class="footer-brand-badge-new">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <div class="footer-badge-chip">
+            <span class="chip-dot-yellow"></span>
             Rated 4.6/5 on Justdial
           </div>
         </div>
       </div>
 
-      <!-- Box 2: Quick Links -->
-      <div class="footer-box footer-box-links">
-        <div class="footer-box-inner">
-          <h4 class="footer-box-title">Quick Links</h4>
-          <ul class="footer-box-list">
-            <li><a href="#home" class="footer-box-link">
-              <span class="footer-rect-indicator"></span> Home
-            </a></li>
-            <li><a href="#about" class="footer-box-link">
-              <span class="footer-rect-indicator"></span> About Us
-            </a></li>
-            <li><a href="#academics" class="footer-box-link">
-              <span class="footer-rect-indicator"></span> Academics
-            </a></li>
-            <li><a href="#facilities" class="footer-box-link">
-              <span class="footer-rect-indicator"></span> Facilities
-            </a></li>
-            <li><a href="#contact" class="footer-box-link">
-              <span class="footer-rect-indicator"></span> Contact
-            </a></li>
-          </ul>
-        </div>
+      <!-- Column 2: Academic Programs -->
+      <div class="footer-nav-column">
+        <h3 class="footer-column-title">Programs</h3>
+        <ul class="footer-links-list">
+          <li><a href="#academics" class="footer-premium-link">Primary School (Nursery - V)</a></li>
+          <li><a href="#academics" class="footer-premium-link">Middle School (VI - VIII)</a></li>
+          <li><a href="#academics" class="footer-premium-link">High School (IX & X)</a></li>
+          <li><a href="#academics" class="footer-premium-link">IIT / NEET Prep Foundation</a></li>
+        </ul>
       </div>
 
-      <!-- Box 3: Connect -->
-      <div class="footer-box footer-box-connect">
-        <div class="footer-box-inner">
-          <h4 class="footer-box-title">Connect</h4>
-          <ul class="footer-box-list">
-            <li><a href="https://www.facebook.com/nalandahighschool/" target="_blank" rel="noopener" class="footer-box-link">
-              <span class="footer-rect-indicator"></span> Facebook Page
-            </a></li>
-            <li><a href="https://www.instagram.com/nalanda_high_school_nizamabad/" target="_blank" rel="noopener" class="footer-box-link">
-              <span class="footer-rect-indicator"></span> Instagram Profile
-            </a></li>
-            <li><a href="https://www.justdial.com/Nizamabad/Nalanda-High-School-Near-Radio-Station-Shivaji-Nagar/9999P8462-8462-120607102728-F6U7_BZDET" target="_blank" rel="noopener" class="footer-box-link">
-              <span class="footer-rect-indicator"></span> Justdial Reviews
-            </a></li>
-            <li><a href="https://maps.app.goo.gl/ArjA7rZzrMdH1kQv9" target="_blank" rel="noopener" class="footer-box-link">
-              <span class="footer-rect-indicator"></span> Find on Map
-            </a></li>
-          </ul>
-        </div>
+      <!-- Column 3: Quick Navigation -->
+      <div class="footer-nav-column">
+        <h3 class="footer-column-title">Quick Links</h3>
+        <ul class="footer-links-list">
+          <li><a href="#home" class="footer-premium-link">Home</a></li>
+          <li><a href="#about" class="footer-premium-link">About Us</a></li>
+          <li><a href="#academics" class="footer-premium-link">Academics</a></li>
+          <li><a href="#facilities" class="footer-premium-link">Campus Facilities</a></li>
+          <li><a href="#contact" class="footer-premium-link">Contact Office</a></li>
+        </ul>
       </div>
 
-    </div>
-
-    <!-- Bottom bar -->
-    <div class="footer-bottom-bar container">
-      <p class="footer-copy-new">&copy; 2026 Nalanda High School, Nizamabad. All rights reserved.</p>
-      <div class="footer-love-credit">
-        Built with <span class="heart-emoji">❤️</span> by <a href="https://siddhidynamics.in/" target="_blank" rel="noopener" class="gold-link">Siddhi Dynamics LLP</a>
+      <!-- Column 4: Address & Connect -->
+      <div class="footer-contact-column">
+        <h3 class="footer-column-title">Contact & Socials</h3>
+        <p class="footer-contact-info">
+          📍 Near Radio Station, Shivaji Nagar, Nizamabad, Telangana 503001
+        </p>
+        <p class="footer-contact-info">
+          📞 +91 94410 41447
+        </p>
+        
+        <!-- Social Icons Grid -->
+        <div class="footer-social-icons">
+          <a href="https://www.facebook.com/nalandahighschool/" target="_blank" rel="noopener" class="social-circle-btn" aria-label="Facebook Page">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/nalanda_high_school_nizamabad/" target="_blank" rel="noopener" class="social-circle-btn" aria-label="Instagram Profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.justdial.com/Nizamabad/Nalanda-High-School-Near-Radio-Station-Shivaji-Nagar/9999P8462-8462-120607102728-F6U7_BZDET" target="_blank" rel="noopener" class="social-circle-btn" aria-label="Justdial Reviews">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </a>
+          <a href="https://maps.app.goo.gl/ArjA7rZzrMdH1kQv9" target="_blank" rel="noopener" class="social-circle-btn" aria-label="Find on Google Maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </a>
+        </div>
       </div>
     </div>
 
+    <!-- Bottom copyright / Credits -->
+    <div class="footer-bottom-premium">
+      <div class="container bottom-premium-inner">
+        <p class="copyright-text">&copy; 2026 Nalanda High School, Nizamabad. All rights reserved.</p>
+        <p class="credit-text">
+          Built with <span class="heart-pulse">❤️</span> by <a href="https://siddhidynamics.in/" target="_blank" rel="noopener" class="gold-link">Siddhi Dynamics LLP</a>
+        </p>
+      </div>
+    </div>
   </footer>
 
   <!-- Modal Admission Form Dialog -->

@@ -101,4 +101,25 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- Scroll-Triggered Reveal IntersectionObserver ---
+  const revealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale');
+  
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        // Once revealed, no need to track it anymore
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15, // trigger when 15% of element is visible
+    rootMargin: '0px 0px -50px 0px' // offset so it triggers slightly before coming fully into view
+  });
+
+  revealElements.forEach(el => {
+    revealObserver.observe(el);
+  });
 });
+
