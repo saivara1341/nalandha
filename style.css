@@ -3316,7 +3316,7 @@ body {
 
 /* Contact Section */
 .contact-section {
-  padding-block: 3rem;
+  padding-block: 6rem;
   background: var(--bg-2);
 }
 
@@ -4025,7 +4025,7 @@ section {
 .contact-side-by-side-grid {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
-  gap: 1rem !important;
+  gap: 1.75rem !important;
   align-items: stretch !important;
 }
 
@@ -4036,7 +4036,7 @@ section {
 }
 
 .contact-form-panel {
-  padding: 1rem !important;
+  padding: 1.75rem !important;
   display: flex !important;
   flex-direction: column !important;
 }
@@ -4051,7 +4051,7 @@ section {
 .form-row-2 {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
-  gap: 0.5rem !important;
+  gap: 0.85rem !important;
 }
 
 @media (max-width: 576px) {
@@ -4061,7 +4061,7 @@ section {
 }
 
 .form-group {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0.85rem !important;
 }
 
 .form-label {
@@ -6017,7 +6017,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .footer-premium {
   background: radial-gradient(circle at 50% 0%, #151520 0%, #08080c 100%) !important;
   color: #ffffff !important;
-  padding-top: 5rem !important;
+  padding-top: 3rem !important;
   padding-bottom: 0 !important;
   position: relative !important;
   overflow: hidden !important;
@@ -6037,8 +6037,8 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .footer-grid-layout {
   display: grid !important;
   grid-template-columns: 1.4fr 1.2fr 0.8fr 1fr !important;
-  gap: 2.5rem !important;
-  margin-bottom: 4rem !important;
+  gap: 1.75rem !important;
+  margin-bottom: 2.5rem !important;
   position: relative !important;
   z-index: 2 !important;
 }
@@ -6046,7 +6046,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .footer-brand-column {
   display: flex !important;
   flex-direction: column !important;
-  gap: 1.25rem !important;
+  gap: 0.85rem !important;
 }
 
 .footer-logo-wrap {
@@ -6138,7 +6138,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .footer-nav-column {
   display: flex !important;
   flex-direction: column !important;
-  gap: 1.25rem !important;
+  gap: 0.85rem !important;
 }
 
 .footer-column-title {
@@ -6170,7 +6170,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   margin: 0 !important;
   display: flex !important;
   flex-direction: column !important;
-  gap: 0.75rem !important;
+  gap: 0.5rem !important;
 }
 
 .footer-premium-link {
@@ -6192,7 +6192,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .footer-contact-column {
   display: flex !important;
   flex-direction: column !important;
-  gap: 1rem !important;
+  gap: 0.75rem !important;
 }
 
 .footer-contact-info {
@@ -6239,8 +6239,8 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
 .footer-bottom-premium {
   border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-  padding: 1.5rem 0 !important;
-  margin-top: 2rem !important;
+  padding: 1rem 0 !important;
+  margin-top: 1.25rem !important;
   background: rgba(0, 0, 0, 0.2) !important;
 }
 
