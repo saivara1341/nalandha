@@ -6952,3 +6952,119 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .scroll-stagger > *:nth-child(7) { transition-delay: 0.6s; }
 .scroll-stagger > *:nth-child(8) { transition-delay: 0.7s; }
 
+
+/* =========================================================
+   HERO ZIG-ZAG CARDS STAGGERED LAYOUT
+   ========================================================= */
+
+.hero-zigzag-container {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 580px !important;
+}
+
+.hero-zigzag-card {
+  position: absolute !important;
+  width: 250px !important;
+  height: 160px !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 15px 35px rgba(13, 13, 16, 0.16) !important;
+  border: 3px solid #ffffff !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.hero-zigzag-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.hero-zigzag-card:hover {
+  transform: translateY(-8px) scale(1.03) rotate(var(--hover-rotate, 1deg)) !important;
+  box-shadow: 0 20px 45px rgba(13, 13, 16, 0.25) !important;
+  z-index: 25 !important;
+}
+
+/* Zig-zag positions on desktop */
+.hero-zigzag-card.card-1 {
+  top: 20px !important;
+  left: 5% !important;
+  z-index: 10 !important;
+  --hover-rotate: -2deg;
+}
+
+.hero-zigzag-card.card-2 {
+  top: 190px !important;
+  right: 5% !important;
+  z-index: 11 !important;
+  --hover-rotate: 2deg;
+}
+
+.hero-zigzag-card.card-3 {
+  top: 360px !important;
+  left: 10% !important;
+  z-index: 12 !important;
+  --hover-rotate: -1deg;
+}
+
+/* Label styling with small icons and text */
+.hero-zigzag-label {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: rgba(13, 13, 16, 0.8) !important;
+  backdrop-filter: blur(4px) !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.45rem !important;
+  padding: 0.5rem 0.75rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.zigzag-icon {
+  font-size: 0.95rem !important;
+}
+
+.zigzag-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: uppercase !important;
+}
+
+/* Responsive adjustments for Zig-zag Cards */
+@media (max-width: 900px) {
+  .hero-zigzag-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+    min-height: auto !important;
+    padding: 1.5rem 0 !important;
+    height: auto !important;
+  }
+  
+  .hero-zigzag-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 45% !important;
+    min-width: 140px !important;
+    height: 100px !important;
+  }
+  
+  .hero-right {
+    height: auto !important;
+  }
+}
+
+
