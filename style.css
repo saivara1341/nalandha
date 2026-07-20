@@ -5817,15 +5817,15 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   display: inline-flex !important;
   align-items: center !important;
   gap: 0.5rem !important;
-  background: linear-gradient(135deg, rgba(128, 0, 0, 0.05), rgba(217, 119, 6, 0.08)) !important;
-  border: 1.5px solid rgba(128, 0, 0, 0.2) !important;
+  background: #ffffff !important;
+  border: 1.5px solid var(--line, #dad6c9) !important;
   border-radius: 999px !important;
-  padding: 0.38rem 1.1rem !important;
+  padding: 0.35rem 1rem !important;
   font-family: 'Inter', sans-serif !important;
-  font-size: 0.8rem !important;
+  font-size: 0.78rem !important;
   font-weight: 700 !important;
-  color: #7c1d1d !important;
-  box-shadow: 0 4px 14px rgba(128, 0, 0, 0.06) !important;
+  color: var(--ink, #0d0d10) !important;
+  box-shadow: 0 4px 12px rgba(13,13,16,0.06) !important;
   width: fit-content !important;
 }
 
@@ -5833,7 +5833,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   width: 8px !important;
   height: 8px !important;
   border-radius: 50% !important;
-  background: #800000 !important;
+  background: #10b981 !important;
   animation: pulse-dot 2s infinite !important;
   flex-shrink: 0 !important;
 }
@@ -5848,13 +5848,13 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   display: flex !important;
   flex-direction: column !important;
   gap: 0 !important;
-  line-height: 1.08 !important;
+  line-height: 1.05 !important;
 }
 
 .hero-h1-light {
   font-size: clamp(2.8rem, 5vw, 4.2rem) !important;
-  font-weight: 400 !important;
-  color: #334155 !important;
+  font-weight: 300 !important;
+  color: #8a8780 !important;
   letter-spacing: -0.03em !important;
   display: block !important;
 }
@@ -5862,7 +5862,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .hero-h1-bold {
   font-size: clamp(3.2rem, 6vw, 5.2rem) !important;
   font-weight: 900 !important;
-  color: #800000 !important; /* Royal Indian Maroon */
+  color: #0d0d10 !important;
   letter-spacing: -0.04em !important;
   display: block !important;
 }
@@ -5870,29 +5870,28 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .hero-h1-accent-line {
   font-size: clamp(2.2rem, 4vw, 3.5rem) !important;
   font-weight: 600 !important;
-  color: #1e293b !important;
+  color: #0d0d10 !important;
   letter-spacing: -0.03em !important;
   display: block !important;
 }
 
 .hero-h1-highlight {
-  background: linear-gradient(135deg, #fef3c7, #fde68a) !important;
-  color: #78350f !important;
-  padding: 0.05rem 0.5rem !important;
-  border-radius: 10px !important;
-  border: 1px solid rgba(217, 119, 6, 0.3) !important;
+  background: var(--green, #bfd58f) !important;
+  color: #3a5c1a !important;
+  padding: 0 0.4rem !important;
+  border-radius: 8px !important;
 }
 
 .hero-sub {
   font-family: 'Inter', sans-serif !important;
-  font-size: 0.98rem !important;
-  color: #334155 !important;
+  font-size: 0.95rem !important;
+  color: #6b6a65 !important;
   line-height: 1.7 !important;
-  max-width: 540px !important;
+  max-width: 520px !important;
 }
 
 .hero-sub strong {
-  color: #800000 !important;
+  color: #0d0d10 !important;
   font-weight: 800 !important;
 }
 
@@ -5902,11 +5901,11 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   align-items: center !important;
   gap: 0 !important;
   background: #ffffff !important;
-  border: 1.5px solid rgba(128, 0, 0, 0.12) !important;
+  border: 1.5px solid var(--line, #dad6c9) !important;
   border-radius: 16px !important;
   padding: 0.75rem 1.25rem !important;
   width: fit-content !important;
-  box-shadow: 0 6px 20px rgba(128, 0, 0, 0.06) !important;
+  box-shadow: 0 4px 16px rgba(13,13,16,0.06) !important;
 }
 
 .hero-stat-chip {
@@ -5919,24 +5918,24 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .hero-stat-num {
   font-family: 'Inter', sans-serif !important;
   font-weight: 900 !important;
-  font-size: 1.15rem !important;
-  color: #800000 !important;
+  font-size: 1.1rem !important;
+  color: #0d0d10 !important;
   line-height: 1 !important;
 }
 
 .hero-stat-lbl {
   font-family: 'Inter', sans-serif !important;
-  font-size: 0.72rem !important;
-  font-weight: 700 !important;
-  color: #475569 !important;
-  margin-top: 0.25rem !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  color: #8a8780 !important;
+  margin-top: 0.2rem !important;
   white-space: nowrap !important;
 }
 
 .hero-stat-divider {
   width: 1px !important;
   height: 28px !important;
-  background: rgba(128, 0, 0, 0.15) !important;
+  background: var(--line, #dad6c9) !important;
 }
 
 /* --- CTA BUTTONS --- */
@@ -5947,41 +5946,40 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 }
 
 .hero-cta-primary {
-  background: linear-gradient(135deg, #800000 0%, #580000 100%) !important;
+  background: #0d0d10 !important;
   color: #ffffff !important;
   font-family: 'Inter', sans-serif !important;
   font-weight: 800 !important;
   font-size: 0.88rem !important;
   padding: 0.75rem 1.65rem !important;
-  border-radius: 14px !important;
+  border-radius: 999px !important;
   border: none !important;
   cursor: pointer !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 0.5rem !important;
-  box-shadow: 0 8px 24px rgba(128,0,0,0.28) !important;
+  box-shadow: 0 8px 24px rgba(13,13,16,0.22) !important;
   transition: transform 0.22s, box-shadow 0.22s !important;
 }
 
 .hero-cta-primary:hover {
   transform: translateY(-3px) !important;
-  box-shadow: 0 14px 32px rgba(128,0,0,0.38) !important;
+  box-shadow: 0 14px 32px rgba(13,13,16,0.32) !important;
 }
 
 .hero-cta-ghost {
-  background: #ffffff !important;
-  color: #800000 !important;
+  background: transparent !important;
+  color: #0d0d10 !important;
   font-family: 'Inter', sans-serif !important;
   font-weight: 700 !important;
   font-size: 0.88rem !important;
-  padding: 0.72rem 1.4rem !important;
-  border-radius: 14px !important;
-  border: 1.5px solid #800000 !important;
+  padding: 0.75rem 1.25rem !important;
+  border-radius: 999px !important;
+  border: 1.5px solid var(--line, #dad6c9) !important;
   text-decoration: none !important;
   display: inline-flex !important;
   align-items: center !important;
-  box-shadow: 0 4px 14px rgba(128, 0, 0, 0.06) !important;
-  transition: transform 0.22s, background 0.22s !important;
+  transition: background 0.2s, border-color 0.2s !important;
 }
 
 .hero-cta-ghost:hover {
