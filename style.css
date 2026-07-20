@@ -7269,6 +7269,15 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     width: 100% !important;
     max-width: 100% !important;
     position: relative !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 
   section, main {
@@ -7316,9 +7325,15 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
   /* ── HERO ────────────────────────────────────────────── */
   .hero-fullscreen {
-    padding-top: 5rem !important;
-    padding-bottom: 2rem !important;
-    min-height: auto !important;
+    min-height: 100dvh !important;
+    height: 100dvh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: 3.5rem !important;
+    padding-bottom: 1.5rem !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   .hero-inner {
