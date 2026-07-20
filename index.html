@@ -42,9 +42,39 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <button type="button" class="contact-pill btn--open-enquiry">Enquire Now</button>
+      <div class="nav-right-group">
+        <button type="button" class="contact-pill btn--open-enquiry">Enquire Now</button>
+        <!-- Hamburger — mobile only -->
+        <button type="button" class="hamburger-btn" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
+          <span class="ham-bar"></span>
+          <span class="ham-bar"></span>
+          <span class="ham-bar"></span>
+        </button>
+      </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+  <nav class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile navigation">
+    <div class="mobile-nav-header">
+      <div style="display:flex; align-items:center; gap:0.6rem;">
+        <img src="assets/logo.jpg" alt="Nalanda Logo" style="width:30px; height:30px; border-radius:50%; object-fit:cover;">
+        <span style="font-family:'Inter',sans-serif; font-weight:900; font-size:0.95rem; color:#0d0d10; letter-spacing:-0.03em;">Nalanda High School</span>
+      </div>
+      <button type="button" class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#academics" class="mobile-nav-link">Academics</a></li>
+      <li><a href="#facilities" class="mobile-nav-link">Facilities</a></li>
+      <li><a href="#testimonials" class="mobile-nav-link">Reviews</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <button type="button" class="mobile-nav-enquire btn--open-enquiry">Enquire Now →</button>
+  </nav>
 
   <main id="main-content">
 
@@ -61,13 +91,13 @@
         <div class="hero-left">
 
           <!-- Eyebrow badge -->
-          <div class="hero-badge">
+          <div class="hero-badge hero-slide-in" style="animation-delay: 0.1s;">
             <span class="hero-badge-dot"></span>
             Trusted School Since <span style="color: #ff5a5f !important; font-weight: 700;">1980</span> &bull; Nizamabad
           </div>
 
           <!-- Headline -->
-          <h1 class="hero-h1">
+          <h1 class="hero-h1 hero-slide-in" style="animation-delay: 0.25s;">
             <span class="hero-h1-light">Shaping</span>
             <span class="hero-h1-bold">Future Leaders</span>
             <span class="hero-h1-accent-line">
@@ -76,14 +106,14 @@
           </h1>
 
           <!-- Subtext -->
-          <p class="hero-sub">
+          <p class="hero-sub hero-slide-in" style="animation-delay: 0.4s;">
             Co-educational English Medium institution with <strong>45+ years</strong> of
             academic excellence. 100% SSC pass rate, modern STEM labs, and expert faculty — 
             Nursery to Class 10.
           </p>
 
           <!-- Stats pills row -->
-          <div class="hero-stats">
+          <div class="hero-stats hero-slide-in" style="animation-delay: 0.55s;">
             <div class="hero-stat-chip">
               <span class="hero-stat-num">45+</span>
               <span class="hero-stat-lbl">Years</span>
@@ -106,7 +136,7 @@
           </div>
 
           <!-- CTA Buttons -->
-          <div class="hero-ctas">
+          <div class="hero-ctas hero-slide-in" style="animation-delay: 0.7s;">
             <button type="button" class="hero-cta-primary btn--open-enquiry">
               Start Inquiry
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
@@ -158,7 +188,7 @@
       <div class="container below-grid">
 
         <!-- LEFT COLUMN -->
-        <div class="col-left">
+        <div class="col-left scroll-reveal-left">
           <div class="stack-block clay-card">
             <span class="badge-tag">Academic Foundation</span>
             <h3>IIT / NEET Prep &amp; SSC Board</h3>
@@ -174,7 +204,7 @@
         </div>
 
         <!-- CENTER COLUMN (Why Join Nalanda Card) -->
-        <div class="col-center">
+        <div class="col-center scroll-reveal">
           <div class="try-pill-wrap">
             <button type="button" class="try-pill btn--open-enquiry" style="background:#0d0d10 !important; color:#ffffff !important; font-weight:800; font-size:0.85rem; padding:0.55rem 1.4rem; border-radius:999px; box-shadow:0 8px 20px rgba(0,0,0,0.25); border:1.5px solid rgba(255,255,255,0.3); display:inline-flex; align-items:center; gap:8px;">
               <span style="width:8px; height:8px; border-radius:50%; background:#10b981; display:inline-block;"></span>
@@ -231,7 +261,7 @@
         </div>
 
         <!-- RIGHT COLUMN -->
-        <div class="col-right">
+        <div class="col-right scroll-reveal-right">
           <div class="experts clay-card" style="background:#ffffff !important;">
             <div class="avatar-stack">
               <div style="background-image: url('assets/faculty_1.png')"></div>
@@ -260,7 +290,7 @@
     <!-- ============ ABOUT US SECTION ============ -->
     <section id="about" class="about-section">
       <div class="container grid-2">
-        <div class="about-img-box clay-card">
+        <div class="about-img-box clay-card scroll-reveal-left">
           <img src="assets/school_building.jpg" alt="Nalanda High School Building" class="about-hero-img">
           <div class="about-experience-badge">
             <span class="badge-number">45+</span>
@@ -268,7 +298,7 @@
           </div>
         </div>
 
-        <div class="about-content">
+        <div class="about-content scroll-reveal-right">
           <header class="section-header" style="margin-bottom: 1rem;">
             <span class="eyebrow">About Us</span>
             <h2 class="section-title">A Tradition of Excellence</h2>
@@ -289,7 +319,7 @@
     <!-- ============ ACADEMICS SECTION ============ -->
     <section id="academics" class="academics-section">
       <div class="container">
-        <header class="section-header mx-auto text-center" style="margin-bottom: 2.5rem;">
+        <header class="section-header mx-auto text-center scroll-reveal" style="margin-bottom: 2.5rem;">
           <span class="eyebrow">Academics</span>
           <h2 class="section-title">Academic Programs</h2>
           <p class="section-desc">Structured learning designed for foundational excellence and competitive readiness.</p>
@@ -297,7 +327,7 @@
 
         <div class="academics-grid">
           <!-- Primary -->
-          <article class="academic-card clay-card">
+          <article class="academic-card clay-card scroll-reveal" style="transition-delay: 0.1s;">
             <span class="level-tag">Nursery to Class 5</span>
             <h3>Primary School</h3>
             <p>Focuses on language fluency, foundational mathematics, and visual science concepts.</p>
@@ -309,7 +339,7 @@
           </article>
 
           <!-- Middle -->
-          <article class="academic-card clay-card">
+          <article class="academic-card clay-card scroll-reveal" style="transition-delay: 0.25s;">
             <span class="level-tag">Classes 6 to 8</span>
             <h3>Middle School</h3>
             <p>Builds core scientific reasoning, mathematical problem solving, and language fluency.</p>
@@ -321,7 +351,7 @@
           </article>
 
           <!-- High School -->
-          <article class="academic-card clay-card featured-level">
+          <article class="academic-card clay-card featured-level scroll-reveal" style="transition-delay: 0.4s;">
             <span class="level-tag">Classes 9 &amp; 10</span>
             <h3>High School &amp; IIT/NEET</h3>
             <p>Telangana SSC Board preparation integrated with daily mock tests and competitive coaching.</p>
@@ -338,7 +368,7 @@
             <!-- ============ CAMPUS FACILITIES (Sticky Card Stack Animation with Photo Backgrounds) ============ -->
     <section id="facilities" class="facilities-section">
       <div class="container">
-        <header class="section-header mx-auto text-center" style="margin-bottom: 1.15rem;">
+        <header class="section-header mx-auto text-center scroll-reveal" style="margin-bottom: 1.15rem;">
           <span class="eyebrow">Campus Facilities</span>
           <h2 class="section-title">Modern Infrastructure</h2>
           <p class="section-desc">Scroll down to explore our 8 campus facilities.</p>
@@ -346,7 +376,7 @@
 
         <div class="sticky-stack-container" id="stickyFacilityStack">
           <!-- 1. Science Lab -->
-          <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 1; --fac-color: #2563eb; --card-bg-img: url('assets/school_hero.png');">
+          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 1; --fac-color: #2563eb; --card-bg-img: url('assets/school_hero.png');">
             <div class="fac-card-overlay"></div>
             <div class="fac-card-content">
               <div class="fac-card-top">
@@ -361,7 +391,7 @@
           </article>
 
           <!-- 2. Computer Center -->
-          <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 2; --fac-color: #0d9488; --card-bg-img: url('assets/school_building.jpg');">
+          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 2; --fac-color: #0d9488; --card-bg-img: url('assets/school_building.jpg');">
             <div class="fac-card-overlay"></div>
             <div class="fac-card-content">
               <div class="fac-card-top">
@@ -376,7 +406,7 @@
           </article>
 
           <!-- 3. Resource Library -->
-          <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 3; --fac-color: #7c3aed; --card-bg-img: url('assets/library.png');">
+          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 3; --fac-color: #7c3aed; --card-bg-img: url('assets/library.png');">
             <div class="fac-card-overlay"></div>
             <div class="fac-card-content">
               <div class="fac-card-top">
@@ -391,7 +421,7 @@
           </article>
 
           <!-- 4. Sports & Playground (New Sports Icon) -->
-          <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 4; --fac-color: #ea580c; --card-bg-img: url('assets/activities/athletics.jpg');">
+          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 4; --fac-color: #ea580c; --card-bg-img: url('assets/activities/athletics.jpg');">
             <div class="fac-card-overlay"></div>
             <div class="fac-card-content">
               <div class="fac-card-top">
@@ -412,7 +442,7 @@
           </article>
 
           <!-- 5. Smart Classrooms (New Visual Screen Icon) -->
-          <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 5; --fac-color: #16a34a; --card-bg-img: url('assets/smart_classroom.png');">
+          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 5; --fac-color: #16a34a; --card-bg-img: url('assets/smart_classroom.png');">
             <div class="fac-card-overlay"></div>
             <div class="fac-card-content">
               <div class="fac-card-top">
@@ -427,7 +457,7 @@
           </article>
 
           <!-- 6. Cafeteria & Canteen (New Food/Utensils Icon) -->
-          <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 6; --fac-color: #dc2626; --card-bg-img: url('assets/canteen.png');">
+          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 6; --fac-color: #dc2626; --card-bg-img: url('assets/canteen.png');">
             <div class="fac-card-overlay"></div>
             <div class="fac-card-content">
               <div class="fac-card-top">
@@ -442,7 +472,7 @@
           </article>
 
           <!-- 7. Medical & First-Aid Room -->
-          <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 7; --fac-color: #0284c7; --card-bg-img: url('assets/medical_room.png');">
+          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 7; --fac-color: #0284c7; --card-bg-img: url('assets/medical_room.png');">
             <div class="fac-card-overlay"></div>
             <div class="fac-card-content">
               <div class="fac-card-top">
@@ -457,7 +487,7 @@
           </article>
 
           <!-- 8. Assembly & Prayer Hall -->
-          <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 8; --fac-color: #ca8a04; --card-bg-img: url('assets/activities/annual_day.jpg');">
+          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 8; --fac-color: #ca8a04; --card-bg-img: url('assets/activities/annual_day.jpg');">
             <div class="fac-card-overlay"></div>
             <div class="fac-card-content">
               <div class="fac-card-top">
@@ -477,7 +507,7 @@
     <!-- ============ REVIEWS & TESTIMONIALS ============ -->
     <section id="testimonials" class="testimonials-section">
       <div class="container">
-        <div class="test-rating-banner clay-card">
+        <div class="test-rating-banner clay-card scroll-reveal">
           <div class="test-score-box">
             <span class="test-score">4.6</span>
             <div class="test-stars">★★★★★</div>
@@ -490,7 +520,7 @@
         </div>
 
         <div class="testimonials-grid">
-          <div class="testimonial-card clay-card">
+          <div class="testimonial-card clay-card scroll-reveal" style="transition-delay: 0.1s;">
             <div class="test-card-top">
               <div class="test-stars-gold">★★★★★</div>
               <span class="test-badge-verified">Verified Review</span>
@@ -505,7 +535,7 @@
             </div>
           </div>
 
-          <div class="testimonial-card clay-card">
+          <div class="testimonial-card clay-card scroll-reveal" style="transition-delay: 0.2s;">
             <div class="test-card-top">
               <div class="test-stars-gold">★★★★★</div>
               <span class="test-badge-verified">Verified Parent</span>
@@ -520,7 +550,7 @@
             </div>
           </div>
 
-          <div class="testimonial-card clay-card">
+          <div class="testimonial-card clay-card scroll-reveal" style="transition-delay: 0.3s;">
             <div class="test-card-top">
               <div class="test-stars-gold">★★★★★</div>
               <span class="test-badge-verified">Verified Parent</span>
@@ -535,7 +565,7 @@
             </div>
           </div>
 
-          <div class="testimonial-card clay-card">
+          <div class="testimonial-card clay-card scroll-reveal" style="transition-delay: 0.4s;">
             <div class="test-card-top">
               <div class="test-stars-gold">★★★★★</div>
               <span class="test-badge-verified">Verified SSC Parent</span>
@@ -556,7 +586,7 @@
     <!-- ============ CTA SECTION ============ -->
     <section class="cta-section">
       <div class="container">
-        <div class="cta-inner clay-card">
+        <div class="cta-inner clay-card scroll-reveal-scale">
           <h2>Empower your child's<br /><em>future at Nalanda</em>.</h2>
           <div class="cta-right">
             <p>Admissions open for 2026-27 from Nursery to Class 10. Schedule a campus tour with our admissions team.</p>
@@ -575,7 +605,7 @@
             <!-- ============ CONTACT & LOCATION SECTION (Side-by-Side Form & Map) ============ -->
     <section id="contact" class="contact-section">
       <div class="container">
-        <header class="section-header text-center mx-auto" style="margin-bottom: 2rem;">
+        <header class="section-header text-center mx-auto scroll-reveal" style="margin-bottom: 2rem;">
           <span class="eyebrow">Contact Us</span>
           <h2 class="section-title">Get In Touch With Our Office</h2>
           <p class="section-desc">Have questions about admissions or scheduling a campus tour? Our administrative team is happy to assist.</p>
@@ -583,7 +613,7 @@
 
         <div class="contact-side-by-side-grid">
           <!-- LEFT COLUMN: Contact Form & Single Non-Duplicate Info Block -->
-          <div class="contact-form-panel clay-card">
+          <div class="contact-form-panel clay-card scroll-reveal-left">
             <h3 class="panel-title">Send An Admission Inquiry</h3>
             <form id="inline-contact-form" class="inline-form">
               <div class="form-row-2">
@@ -614,12 +644,19 @@
               </div>
               <div class="form-group">
                 <label for="c-message" class="form-label">Message / Inquiry</label>
-                <textarea id="c-message" class="form-control" rows="2" placeholder="Your questions or campus tour request..."></textarea>
+                <textarea id="c-message" class="form-control" rows="1" placeholder="Your questions or campus tour request..."></textarea>
               </div>
               <button type="submit" class="btn btn--primary w-full" style="margin-top: 0.5rem;">Submit Inquiry Request</button>
             </form>
+          </div>
 
-            <div class="contact-single-info-block">
+          <!-- RIGHT COLUMN: Side-by-Side Map -->
+          <div class="contact-map-panel clay-card scroll-reveal-right">
+            <iframe title="Nalanda High School Location Map" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.203673752538!2d78.09194127607317!3d18.661238069733076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcddad9289d1f71%3A0x13abc21f45188009!2sNalanda%20High%20School!5e0!3m2!1sen!2sin!4v1721510000000!5m2!1sen!2sin" 
+                    loading="lazy"></iframe>
+            
+            <div class="contact-single-info-block" style="margin: 0 !important; padding: 1.5rem !important; background: rgba(255,255,255,0.45) !important; border-top: 1px solid var(--line) !important; border-radius: 0 0 24px 24px !important;">
               <div class="info-line">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
                 <span>Nyalkal Road, Near Radio Station, Shivaji Nagar, Nizamabad, TS 503001</span>
@@ -653,13 +690,6 @@
                 </a>
               </div>
             </div>
-          </div>
-
-          <!-- RIGHT COLUMN: Side-by-Side Map -->
-          <div class="contact-map-panel clay-card">
-            <iframe title="Nalanda High School Location Map" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.203673752538!2d78.09194127607317!3d18.661238069733076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcddad9289d1f71%3A0x13abc21f45188009!2sNalanda%20High%20School!5e0!3m2!1sen!2sin!4v1721510000000!5m2!1sen!2sin" 
-                    loading="lazy"></iframe>
           </div>
         </div>
 

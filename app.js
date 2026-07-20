@@ -1,56 +1,62 @@
 
 // ============================================================
-// CODEPEN GSAP INTRO TIMELINE & SCROLLTRIGGER ANIMATIONS
+// ANIMATIONS CONTROLLED VIA HIGH-PERFORMANCE CSS & OBSERVERS
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
-  if (typeof gsap !== 'undefined') {
-    if (typeof ScrollTrigger !== 'undefined') {
-      gsap.registerPlugin(ScrollTrigger);
-    }
+  // GSAP blocks removed in favor of CSS transitions and IntersectionObserver reveals
 
-    // Set initial hidden states for animated elements
-    gsap.set(".nav", { opacity: 0, y: -20 });
-    gsap.set(".headline .word > span", { y: "105%" });
-    gsap.set("#inlineImg, #ideaPill", { scale: 0 });
-    gsap.set(".col-left > *, .col-right > *", { opacity: 0, y: 30 });
-    gsap.set(".big-image", { opacity: 0, y: 40, scale: 0.95 });
-    gsap.set(".try-pill-wrap", { opacity: 0, y: -20 });
-    gsap.set(".sphere", { scale: 0, opacity: 0 });
-    gsap.set(".academic-card, .testimonial-card, .cta-inner", { opacity: 0, y: 25 });
-
-    // Intro GSAP Timeline
-    const intro = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-    intro
-      .to(".nav", { opacity: 1, y: 0, duration: 0.8 }, 0.1)
-      .to(".line-1 .word > span", { y: "0%", duration: 0.9, stagger: 0.1 }, 0.3)
-      .to(".line-2 .word > span", { y: "0%", duration: 0.9 }, 0.55)
-      .to("#inlineImg", { scale: 1, duration: 0.6, ease: "back.out(1.7)" }, 0.7)
-      .to("#ideaPill", { scale: 1, duration: 0.6, ease: "back.out(1.7)" }, 0.8)
-      .to(".line-3 .word > span", { y: "0%", duration: 0.9, stagger: 0.1 }, 0.9)
-      .to(".try-pill-wrap", { opacity: 1, y: 0, duration: 0.6 }, 1.1)
-      .to(".big-image", { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "power2.out" }, 1.2)
-      .to(".col-left > *, .col-right > *", { opacity: 1, y: 0, duration: 0.7, stagger: 0.1 }, 1.35)
-      .to(".sphere", { scale: 1, opacity: 1, duration: 0.6, stagger: 0.05, ease: "back.out(1.7)" }, 1.5);
-
-    // ScrollTrigger reveals for cards
-    if (typeof ScrollTrigger !== 'undefined') {
-      gsap.utils.toArray('.academic-card, .testimonial-card, .cta-inner').forEach(el => {
-        gsap.to(el, {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 85%",
-            toggleActions: "play none none none"
-          }
-        });
-      });
-    }
+  // ── Header transparent-on-scroll ──────────────────────────
+  const header = document.querySelector('.header-curved');
+  if (header) {
+    const SCROLL_THRESHOLD = 80;
+    const onScroll = () => {
+      if (window.scrollY > SCROLL_THRESHOLD) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
+
+  // ── Mobile navigation drawer ───────────────────────────────
+  const hamburgerBtn  = document.getElementById('hamburger-btn');
+  const mobileDrawer  = document.getElementById('mobile-nav-drawer');
+  const mobileOverlay = document.getElementById('mobile-nav-overlay');
+  const mobileClose   = document.getElementById('mobile-nav-close');
+
+  function openDrawer() {
+    mobileDrawer?.classList.add('is-open');
+    mobileOverlay?.classList.add('is-open');
+    hamburgerBtn?.classList.add('is-open');
+    hamburgerBtn?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    mobileDrawer?.classList.remove('is-open');
+    mobileOverlay?.classList.remove('is-open');
+    hamburgerBtn?.classList.remove('is-open');
+    hamburgerBtn?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  hamburgerBtn?.addEventListener('click', openDrawer);
+  mobileClose?.addEventListener('click', closeDrawer);
+  mobileOverlay?.addEventListener('click', closeDrawer);
+
+  // Close drawer when any nav link is tapped
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', closeDrawer);
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDrawer();
+  });
 });
+
 
 // Modal Dialog Handlers
 document.addEventListener('DOMContentLoaded', () => {

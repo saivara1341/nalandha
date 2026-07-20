@@ -4025,7 +4025,7 @@ section {
 .contact-side-by-side-grid {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
-  gap: 1.75rem !important;
+  gap: 1.25rem !important;
   align-items: stretch !important;
 }
 
@@ -4036,22 +4036,22 @@ section {
 }
 
 .contact-form-panel {
-  padding: 1.75rem !important;
+  padding: 1.1rem 1.25rem !important;
   display: flex !important;
   flex-direction: column !important;
 }
 
 .panel-title {
-  font-size: 1.25rem !important;
+  font-size: 1rem !important;
   font-weight: 800 !important;
   color: var(--ink) !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: 0.65rem !important;
 }
 
 .form-row-2 {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
-  gap: 0.85rem !important;
+  gap: 0.5rem !important;
 }
 
 @media (max-width: 576px) {
@@ -4061,24 +4061,24 @@ section {
 }
 
 .form-group {
-  margin-bottom: 0.85rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .form-label {
   display: block !important;
-  font-size: 0.82rem !important;
+  font-size: 0.75rem !important;
   font-weight: 700 !important;
   color: var(--ink) !important;
-  margin-bottom: 0.3rem !important;
+  margin-bottom: 0.2rem !important;
 }
 
 .form-control {
   width: 100% !important;
-  padding: 0.6rem 0.85rem !important;
-  border-radius: 12px !important;
+  padding: 0.4rem 0.7rem !important;
+  border-radius: 8px !important;
   border: 1.5px solid var(--line) !important;
   background: var(--bg) !important;
-  font-size: 0.88rem !important;
+  font-size: 0.8rem !important;
   color: var(--ink) !important;
   outline: none !important;
   transition: border-color 0.2s, box-shadow 0.2s !important;
@@ -4354,7 +4354,35 @@ section {
               inset 4px 4px 8px rgba(255, 255, 255, 0.9), 
               0 14px 36px rgba(13, 13, 16, 0.12) !important;
   padding: 0.45rem 1.25rem !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease !important;
+}
+
+/* Transparent state when scrolled down */
+.header-curved.header-scrolled {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Nav links turn white when fully transparent */
+.header-curved.header-scrolled .nav-links-curved a,
+.header-curved.header-scrolled .logo-text-codepen,
+.header-curved.header-scrolled .logo-sub {
+  color: #ffffff !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5) !important;
+}
+
+.header-curved.header-scrolled .nav-links-curved a:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+.header-curved.header-scrolled .contact-pill {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 .nav-container-curved {
@@ -4391,20 +4419,200 @@ section {
 
 @media (max-width: 768px) {
   .header-curved {
-    width: min(95%, 600px) !important;
-    top: 0.85rem !important;
-    padding: 0.4rem 0.85rem !important;
+    top: 0.65rem !important;
+    width: calc(100% - 2rem) !important;
+    padding: 0.5rem 0.85rem !important;
+    border-radius: 16px !important;
   }
 
   .nav-links-curved {
-    gap: 0.75rem !important;
+    display: none !important;
   }
 
-  .nav-links-curved a {
-    font-size: 0.78rem !important;
-    padding: 0.3rem 0.5rem !important;
+  /* Hide desktop Enquire Now pill on mobile — drawer has its own CTA */
+  .nav-right-group .contact-pill {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: flex !important;
   }
 }
+
+/* ── Nav right group ─────────────────────────────── */
+.nav-right-group {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.65rem !important;
+}
+
+/* ── Hamburger button ─────────────────────────────── */
+.hamburger-btn {
+  display: none; /* hidden on desktop */
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 5px !important;
+  width: 38px !important;
+  height: 38px !important;
+  background: #ffffff !important;
+  border: 1.5px solid rgba(13,13,16,0.1) !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  box-shadow: 0 2px 8px rgba(13,13,16,0.08) !important;
+  transition: background 0.2s !important;
+  flex-shrink: 0 !important;
+}
+
+.hamburger-btn:hover {
+  background: #f5f5f0 !important;
+}
+
+.ham-bar {
+  display: block !important;
+  width: 18px !important;
+  height: 2px !important;
+  background: #0d0d10 !important;
+  border-radius: 2px !important;
+  transition: transform 0.3s ease, opacity 0.3s ease !important;
+  transform-origin: center !important;
+}
+
+/* Hamburger → X animation when open */
+.hamburger-btn.is-open .ham-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg) !important;
+}
+.hamburger-btn.is-open .ham-bar:nth-child(2) {
+  opacity: 0 !important;
+  transform: scaleX(0) !important;
+}
+.hamburger-btn.is-open .ham-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg) !important;
+}
+
+/* ── Mobile nav overlay (backdrop) ───────────────── */
+.mobile-nav-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(13, 13, 16, 0.45) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  z-index: 1998 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.mobile-nav-overlay.is-open {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* ── Mobile nav drawer ───────────────────────────── */
+.mobile-nav-drawer {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  height: 100dvh !important;
+  width: min(300px, 80vw) !important;
+  background: #ffffff !important;
+  z-index: 1999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 1.25rem !important;
+  gap: 0 !important;
+  box-shadow: -8px 0 40px rgba(13, 13, 16, 0.18) !important;
+  transform: translateX(110%) !important;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  overflow-y: auto !important;
+}
+
+.mobile-nav-drawer.is-open {
+  transform: translateX(0) !important;
+}
+
+/* ── Drawer header ───────────────────────────────── */
+.mobile-nav-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-bottom: 1.25rem !important;
+  border-bottom: 1px solid #ededea !important;
+  margin-bottom: 1rem !important;
+}
+
+.mobile-nav-close {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  border: 1.5px solid #ededea !important;
+  background: #f9f9f7 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  color: #0d0d10 !important;
+  transition: background 0.2s !important;
+}
+
+.mobile-nav-close:hover {
+  background: #ededea !important;
+}
+
+/* ── Drawer nav links ────────────────────────────── */
+.mobile-nav-links {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.25rem !important;
+  flex: 1 !important;
+}
+
+.mobile-nav-link {
+  display: block !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  color: #0d0d10 !important;
+  text-decoration: none !important;
+  padding: 0.85rem 0.85rem !important;
+  border-radius: 12px !important;
+  transition: background 0.2s, color 0.2s, transform 0.2s !important;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:active {
+  background: #f0f0eb !important;
+  color: #1e3a8a !important;
+  transform: translateX(4px) !important;
+}
+
+/* ── Drawer Enquire Now button ───────────────────── */
+.mobile-nav-enquire {
+  margin-top: 1.25rem !important;
+  width: 100% !important;
+  padding: 0.9rem 1.25rem !important;
+  background: #0d0d10 !important;
+  color: #ffffff !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 0.92rem !important;
+  border: none !important;
+  border-radius: 14px !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  box-shadow: 0 8px 22px rgba(13,13,16,0.22) !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.mobile-nav-enquire:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 28px rgba(13,13,16,0.3) !important;
+}
+
+
 
 
 /* =========================================================
@@ -6289,17 +6497,14 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
 @media (max-width: 1024px) {
   .footer-grid-layout {
-    grid-template-columns: 1.2fr 1fr 1fr !important;
-    gap: 2rem !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    gap: 1.5rem !important;
   }
   .footer-contact-column {
-    grid-column: span 3 !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
-    padding-top: 2rem !important;
+    grid-column: auto !important;
+    flex-direction: column !important;
+    border-top: none !important;
+    padding-top: 0 !important;
   }
 }
 
@@ -6990,21 +7195,21 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
 /* Zig-zag positions on desktop */
 .hero-zigzag-card.card-1 {
-  top: 30px !important;
+  top: 130px !important;
   left: 8% !important;
   z-index: 10 !important;
   --hover-rotate: -2deg;
 }
 
 .hero-zigzag-card.card-2 {
-  top: 175px !important;
+  top: 275px !important;
   right: 8% !important;
   z-index: 11 !important;
   --hover-rotate: 2deg;
 }
 
 .hero-zigzag-card.card-3 {
-  top: 320px !important;
+  top: 420px !important;
   left: 12% !important;
   z-index: 12 !important;
   --hover-rotate: -1deg;
@@ -7068,3 +7273,397 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 }
 
 
+/* ==========================================================
+   COMPREHENSIVE MOBILE REDESIGN — ALL SECTIONS
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+  /* ── GLOBAL ─────────────────────────────────────────── */
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .container {
+    padding-inline: 1rem !important;
+  }
+
+  .section-title {
+    font-size: 1.75rem !important;
+  }
+
+  .section-desc {
+    font-size: 0.9rem !important;
+  }
+
+  /* ── NAVBAR ─────────────────────────────────────────── */
+  .header-curved {
+    top: 0.65rem !important;
+    width: calc(100% - 2rem) !important;
+    padding: 0.5rem 0.85rem !important;
+    border-radius: 16px !important;
+  }
+
+  .nav-links-curved {
+    display: none !important; /* hide on mobile — use Enquire button */
+  }
+
+  .contact-pill {
+    font-size: 0.75rem !important;
+    padding: 0.45rem 0.9rem !important;
+  }
+
+  /* ── HERO ────────────────────────────────────────────── */
+  .hero-fullscreen {
+    padding-top: 5rem !important;
+    padding-bottom: 2rem !important;
+    min-height: auto !important;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center !important;
+  }
+
+  .hero-left {
+    gap: 1rem !important;
+    align-items: center !important;
+  }
+
+  .hero-badge {
+    font-size: 0.72rem !important;
+    padding: 0.3rem 0.85rem !important;
+  }
+
+  .hero-h1-light {
+    font-size: 2rem !important;
+  }
+
+  .hero-h1-bold {
+    font-size: 2.6rem !important;
+  }
+
+  .hero-h1-accent-line {
+    font-size: 1.6rem !important;
+  }
+
+  .hero-sub {
+    font-size: 0.88rem !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .hero-stats {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.25rem !important;
+    padding: 0.6rem 0.75rem !important;
+    width: 100% !important;
+    border-radius: 14px !important;
+  }
+
+  .hero-stat-chip {
+    padding: 0.35rem 0.65rem !important;
+  }
+
+  .hero-stat-num {
+    font-size: 0.95rem !important;
+  }
+
+  .hero-stat-lbl {
+    font-size: 0.62rem !important;
+  }
+
+  .hero-stat-divider {
+    height: 20px !important;
+  }
+
+  .hero-ctas {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.65rem !important;
+  }
+
+  .hero-cta-primary,
+  .hero-cta-ghost {
+    width: 100% !important;
+    justify-content: center !important;
+    font-size: 0.88rem !important;
+    padding: 0.75rem 1rem !important;
+  }
+
+  /* Hero right — zig-zag cards in a horizontal row */
+  .hero-right {
+    height: auto !important;
+  }
+
+  .hero-zigzag-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+    min-height: auto !important;
+    padding: 0.75rem 0 !important;
+    height: auto !important;
+  }
+
+  .hero-zigzag-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: calc(33% - 0.75rem) !important;
+    min-width: 100px !important;
+    height: 90px !important;
+  }
+
+  /* ── ABOUT ───────────────────────────────────────────── */
+  .about-section {
+    padding-block: 3.5rem !important;
+  }
+
+  .about-grid,
+  .about-two-col {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .about-img-box {
+    min-height: 240px !important;
+  }
+
+  .about-boxes-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .about-box {
+    padding: 1rem !important;
+  }
+
+  /* ── ACADEMICS ───────────────────────────────────────── */
+  .academics-section {
+    padding-block: 3.5rem !important;
+  }
+
+  .academic-cards-grid,
+  .academic-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .academic-card {
+    padding: 1.5rem !important;
+  }
+
+  /* ── FACILITIES ──────────────────────────────────────── */
+  #facilities {
+    padding-top: 3rem !important;
+  }
+
+  .sticky-stack-container {
+    gap: 1rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .facility-stack-card {
+    position: relative !important;
+    top: auto !important;
+    padding: 1.25rem 1.25rem !important;
+    border-radius: 16px !important;
+    min-height: auto !important;
+  }
+
+  .facility-stack-inner {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .facility-title {
+    font-size: 1.1rem !important;
+  }
+
+  .facility-desc {
+    font-size: 0.86rem !important;
+  }
+
+  /* ── TESTIMONIALS ────────────────────────────────────── */
+  .testimonials-section {
+    padding-block: 3.5rem !important;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .testimonial-card {
+    padding: 1.25rem !important;
+  }
+
+  /* ── CTA BAND ────────────────────────────────────────── */
+  .cta-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 2rem 1.25rem !important;
+    gap: 1.5rem !important;
+  }
+
+  .cta-inner h2 {
+    font-size: 2rem !important;
+  }
+
+  .cta-right {
+    max-width: 100% !important;
+  }
+
+  .cta-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* ── CONTACT SECTION ─────────────────────────────────── */
+  .contact-section {
+    padding-block: 3.5rem !important;
+  }
+
+  .contact-side-by-side-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .contact-form-panel {
+    padding: 1rem 1.1rem !important;
+  }
+
+  .contact-map-panel {
+    min-height: 300px !important;
+    border-radius: 16px !important;
+  }
+
+  .contact-map-panel iframe {
+    min-height: 240px !important;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .contact-single-info-block {
+    padding: 1rem !important;
+  }
+
+  .contact-social-bar {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+
+  /* ── FOOTER ──────────────────────────────────────────── */
+  .footer-grid-layout {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .footer-brand-column {
+    grid-column: 1 / -1 !important; /* full width for branding */
+  }
+
+  .footer-contact-column {
+    grid-column: 1 / -1 !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    border-top: 1px solid rgba(255,255,255,0.08) !important;
+    padding-top: 1rem !important;
+  }
+
+  .footer-premium {
+    padding-top: 2.5rem !important;
+  }
+
+  .footer-premium-logo {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .brand-title {
+    font-size: 0.9rem !important;
+  }
+
+  .footer-premium-desc {
+    font-size: 0.82rem !important;
+  }
+
+  .footer-column-title {
+    font-size: 0.82rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .footer-premium-link,
+  .footer-links-list a {
+    font-size: 0.8rem !important;
+  }
+
+  .footer-bottom-premium {
+    padding: 0.75rem 0 !important;
+  }
+
+  .bottom-premium-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 0.35rem !important;
+  }
+
+  .copyright-text,
+  .credit-text {
+    font-size: 0.75rem !important;
+  }
+
+  /* ── SECTION HEADERS ─────────────────────────────────── */
+  .section-header {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .eyebrow {
+    font-size: 0.7rem !important;
+  }
+
+  /* ── CLAY CARDS ──────────────────────────────────────── */
+  .clay-card {
+    border-radius: 16px !important;
+  }
+
+} /* end @media 768px */
+
+
+/* Extra small devices */
+@media (max-width: 420px) {
+  .hero-h1-bold {
+    font-size: 2.1rem !important;
+  }
+
+  .hero-h1-light {
+    font-size: 1.6rem !important;
+  }
+
+  .hero-h1-accent-line {
+    font-size: 1.3rem !important;
+  }
+
+  .hero-zigzag-card {
+    width: calc(50% - 0.5rem) !important;
+    height: 80px !important;
+  }
+
+  .footer-grid-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .footer-contact-column {
+    grid-column: auto !important;
+  }
+}
