@@ -7244,31 +7244,10 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   text-transform: uppercase !important;
 }
 
-/* Responsive adjustments for Zig-zag Cards */
+/* Responsive adjustments for Zig-zag Cards - Hidden on Mobile/Tablet */
 @media (max-width: 900px) {
-  .hero-zigzag-container {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 1rem !important;
-    min-height: auto !important;
-    padding: 1.5rem 0 !important;
-    height: auto !important;
-  }
-  
-  .hero-zigzag-card {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    width: 45% !important;
-    min-width: 140px !important;
-    height: 100px !important;
-  }
-  
   .hero-right {
-    height: auto !important;
+    display: none !important;
   }
 }
 
@@ -7393,30 +7372,9 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     padding: 0.75rem 1rem !important;
   }
 
-  /* Hero right — zig-zag cards in a horizontal row */
+  /* Hero right hidden on mobile */
   .hero-right {
-    height: auto !important;
-  }
-
-  .hero-zigzag-container {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 0.75rem !important;
-    min-height: auto !important;
-    padding: 0.75rem 0 !important;
-    height: auto !important;
-  }
-
-  .hero-zigzag-card {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    width: calc(33% - 0.75rem) !important;
-    min-width: 100px !important;
-    height: 90px !important;
+    display: none !important;
   }
 
   /* ── ABOUT ───────────────────────────────────────────── */
