@@ -6145,7 +6145,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.1rem 0;
+  padding: 1.2rem 1.75rem !important;
   border-top: 1px solid rgba(192, 200, 216, 0.12);
   flex-wrap: wrap;
   gap: 0.5rem;
