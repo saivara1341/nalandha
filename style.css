@@ -5805,11 +5805,14 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 }
 
 .hero-photo-main {
-  width: 100% !important;
-  height: 420px !important;
+  width: 90% !important;
+  max-width: 480px !important;
+  height: 320px !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
+  margin: 0 auto !important;
+  border-radius: 24px !important;
 }
 
 .hero-photo-badge {
@@ -6390,3 +6393,339 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   color: #f59e0b !important;
   margin-top: 0.15rem !important;
 }
+
+/* =========================================================
+   COMPREHENSIVE MOBILE REDESIGN (max-width: 768px)
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* --- HEADER --- */
+  .header {
+    padding: 0.5rem 1rem !important;
+  }
+
+  .logo-text {
+    font-size: 1.1rem !important;
+  }
+
+  .contact-pill {
+    font-size: 0.72rem !important;
+    padding: 0.4rem 0.85rem !important;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  /* --- HERO SECTION --- */
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    padding: 1rem 0 !important;
+    text-align: center !important;
+  }
+
+  .hero-left {
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .hero-headline {
+    font-size: 2rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .hero-sub {
+    font-size: 0.82rem !important;
+    max-width: 100% !important;
+  }
+
+  .hero-stats-row {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+
+  .hero-stat-chip {
+    padding: 0.35rem 0.6rem !important;
+  }
+
+  .hero-stat-num {
+    font-size: 1rem !important;
+  }
+
+  .hero-stat-lbl {
+    font-size: 0.6rem !important;
+  }
+
+  .hero-stat-divider {
+    height: 20px !important;
+  }
+
+  .hero-ctas {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.75rem !important;
+  }
+
+  .hero-cta-primary,
+  .hero-cta-ghost {
+    font-size: 0.82rem !important;
+    padding: 0.65rem 1.2rem !important;
+  }
+
+  /* --- HERO RIGHT CARD --- */
+  .hero-right {
+    height: auto !important;
+    min-height: 240px !important;
+    order: -1 !important;
+  }
+
+  .hero-photo-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 260px !important;
+    border-radius: 18px !important;
+  }
+
+  .hero-logo-bar {
+    padding: 0.4rem 0.85rem 0.4rem 0.4rem !important;
+    gap: 0.6rem !important;
+  }
+
+  .hero-logo-bar .hero-logo-img {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .hero-logo-bar .hero-logo-years {
+    font-size: 0.95rem !important;
+  }
+
+  .hero-logo-bar .hero-logo-yrs-sub {
+    font-size: 0.6rem !important;
+  }
+
+  .hero-logo-bar .hero-logo-stars {
+    font-size: 0.65rem !important;
+  }
+
+  .hero-faculty-bar,
+  .hero-smart-bar {
+    padding: 0.35rem 0.85rem !important;
+    gap: 0.5rem !important;
+    margin-top: 0.6rem !important;
+  }
+
+  .hero-faculty-bar .fac-num,
+  .hero-smart-bar .smart-icon {
+    font-size: 0.9rem !important;
+  }
+
+  .hero-faculty-bar .fac-lbl,
+  .hero-smart-bar .smart-lbl {
+    font-size: 0.65rem !important;
+  }
+
+  .hero-photo-accent {
+    display: none !important;
+  }
+
+  .hero-float-badge {
+    display: none !important;
+  }
+
+  /* --- BELOW HERO 3-COL GRID --- */
+  .below-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 1rem 0 !important;
+  }
+
+  .col-left,
+  .col-center,
+  .col-right {
+    width: 100% !important;
+  }
+
+  /* --- ABOUT SECTION --- */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .about-img-wrapper {
+    height: 220px !important;
+  }
+
+  .about-stats-row {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+
+  /* --- ACADEMICS CARDS --- */
+  .academic-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* --- FACILITY STACK CARDS --- */
+  .sticky-stack-container {
+    max-width: 100% !important;
+    padding-bottom: 2rem !important;
+    gap: 1rem !important;
+  }
+
+  .facility-stack-card {
+    position: relative !important;
+    top: 0 !important;
+    padding: 1.5rem 1.25rem !important;
+    border-radius: 16px !important;
+  }
+
+  .facility-title {
+    font-size: 1.1rem !important;
+  }
+
+  .facility-desc {
+    font-size: 0.78rem !important;
+  }
+
+  /* --- REVIEWS SECTION --- */
+  .reviews-scroll-container {
+    gap: 1rem !important;
+  }
+
+  .review-card {
+    min-width: 280px !important;
+    padding: 1.25rem !important;
+  }
+
+  /* --- CTA SECTION --- */
+  .cta-section .container {
+    padding: 2rem 1rem !important;
+  }
+
+  .cta-section h2 {
+    font-size: 1.5rem !important;
+  }
+
+  /* --- CONTACT SECTION --- */
+  .contact-split {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .contact-map-panel iframe {
+    height: 200px !important;
+  }
+
+  /* --- FOOTER BOXES --- */
+  .footer-boxes-wrap {
+    grid-template-columns: 1fr !important;
+    border-radius: 16px !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .footer-box {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(192, 200, 216, 0.2) !important;
+  }
+
+  .footer-box:last-child {
+    border-bottom: none !important;
+  }
+
+  .footer-box-inner {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 0.5rem !important;
+    padding: 1rem 1rem !important;
+  }
+
+  .footer-copy-new {
+    font-size: 0.72rem !important;
+  }
+
+  .footer-love-credit {
+    font-size: 0.72rem !important;
+  }
+
+  /* --- GENERAL SECTION PADDING --- */
+  section {
+    padding: 2.5rem 0 !important;
+  }
+
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .section-title {
+    font-size: 1.6rem !important;
+  }
+
+  .section-sub {
+    font-size: 0.82rem !important;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL MOBILE (max-width: 480px)
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .hero-headline {
+    font-size: 1.65rem !important;
+  }
+
+  .hero-sub {
+    font-size: 0.78rem !important;
+  }
+
+  .hero-photo-main {
+    height: 220px !important;
+  }
+
+  .hero-logo-bar {
+    padding: 0.35rem 0.7rem 0.35rem 0.35rem !important;
+  }
+
+  .hero-logo-bar .hero-logo-img {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .hero-logo-bar-divider {
+    height: 30px !important;
+  }
+
+  .hero-faculty-bar,
+  .hero-smart-bar {
+    padding: 0.3rem 0.7rem !important;
+  }
+
+  .facility-stack-card {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .section-title {
+    font-size: 1.35rem !important;
+  }
+
+  .footer-brand-name {
+    font-size: 0.9rem !important;
+  }
+
+  .footer-brand-desc-new {
+    font-size: 0.75rem !important;
+  }
+}
+
