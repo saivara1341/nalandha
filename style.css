@@ -4117,16 +4117,18 @@ section {
 }
 
 .contact-map-panel {
-  height: 100% !important;
-  min-height: 420px !important;
+  height: auto !important;
+  min-height: auto !important;
   overflow: hidden !important;
   border-radius: 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .contact-map-panel iframe {
   width: 100% !important;
-  height: 100% !important;
-  min-height: 420px !important;
+  height: 320px !important;
+  min-height: 320px !important;
   border: 0 !important;
 }
 
@@ -6138,6 +6140,10 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
    WIDER FACILITY STICKY STACK CARDS
    ========================================================= */
 
+#facilities {
+  overflow: visible !important;
+}
+
 .sticky-stack-container {
   display: flex !important;
   flex-direction: column !important;
@@ -6146,6 +6152,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   width: 100% !important;
   margin-inline: auto !important;
   padding-bottom: 5rem !important;
+  overflow: visible !important;
 }
 
 .facility-stack-card {
@@ -6157,7 +6164,13 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   box-shadow: 0 -6px 20px rgba(0,0,0,0.04), 0 18px 42px rgba(13,13,16,0.13) !important;
   border: none !important;
   min-height: 200px !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  transition: box-shadow 0.3s ease !important;
+}
+
+.facility-stack-card.scroll-reveal,
+.facility-stack-card.scroll-reveal.revealed {
+  transform: none !important;
+  opacity: 1 !important;
 }
 
 
