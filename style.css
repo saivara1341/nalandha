@@ -4206,7 +4206,7 @@ section {
   background: var(--bg-card, #ffffff) !important;
   border-radius: 24px !important;
   box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.04), 0 16px 36px rgba(13, 13, 16, 0.08) !important;
-  border: 2px solid rgba(255, 255, 255, 0.9) !important;
+  border: none !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease !important;
   z-index: calc(10 + var(--stack-idx, 1)) !important;
 }
@@ -6148,7 +6148,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   padding: 2.25rem 2.75rem !important;
   border-radius: 24px !important;
   box-shadow: 0 -6px 20px rgba(0,0,0,0.04), 0 18px 42px rgba(13,13,16,0.13) !important;
-  border: 2px solid rgba(255,255,255,0.9) !important;
+  border: none !important;
   min-height: 200px !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
@@ -7428,6 +7428,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     padding: 1.25rem 1.25rem !important;
     border-radius: 16px !important;
     min-height: auto !important;
+    border: none !important;
   }
 
   .facility-stack-inner {
