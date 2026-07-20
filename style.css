@@ -6036,8 +6036,8 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
 .footer-grid-layout {
   display: grid !important;
-  grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr !important;
-  gap: 3rem !important;
+  grid-template-columns: 1.4fr 1.2fr 0.8fr 1fr !important;
+  gap: 2.5rem !important;
   margin-bottom: 4rem !important;
   position: relative !important;
   z-index: 2 !important;
@@ -6072,27 +6072,21 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
 .footer-brand-text {
   display: flex !important;
-  flex-direction: column !important;
+  flex-direction: row !important;
+  align-items: center !important;
 }
 
 .footer-brand-text .brand-title {
   font-family: 'Inter', sans-serif !important;
-  font-weight: 900 !important;
-  font-size: 1.25rem !important;
-  letter-spacing: -0.02em !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: -0.01em !important;
   color: #ffffff !important;
   line-height: 1 !important;
+  white-space: nowrap !important;
 }
 
-.footer-brand-text .brand-subtitle {
-  font-family: 'Inter', sans-serif !important;
-  font-weight: 500 !important;
-  font-size: 0.75rem !important;
-  letter-spacing: 0.05em !important;
-  color: #bfd58f !important;
-  text-transform: uppercase !important;
-  margin-top: 0.15rem !important;
-}
+/* brand-subtitle hidden — single line used */
 
 .footer-premium-desc {
   font-family: 'Inter', sans-serif !important;
