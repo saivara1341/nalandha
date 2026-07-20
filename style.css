@@ -7427,8 +7427,9 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   }
 
   .facility-stack-card {
-    position: relative !important;
-    top: auto !important;
+    position: sticky !important;
+    top: calc(75px + var(--stack-idx, 1) * 12px) !important;
+    z-index: calc(10 + var(--stack-idx, 1)) !important;
     padding: 1.25rem 1.25rem !important;
     border-radius: 16px !important;
     min-height: auto !important;
