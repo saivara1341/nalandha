@@ -6187,6 +6187,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   text-decoration: none !important;
   transition: all 0.25s ease !important;
   display: inline-block !important;
+  white-space: nowrap !important;
 }
 
 .footer-premium-link:hover {
