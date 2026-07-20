@@ -4345,42 +4345,23 @@ section {
   transform: translateX(-50%) !important;
   width: min(92%, 1080px) !important;
   z-index: 1000 !important;
-  background: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
   border-radius: 999px !important;
-  border: 2px solid transparent !important;
-  box-shadow: none !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 10px 36px rgba(13, 13, 16, 0.08) !important;
   padding: 0.45rem 1.25rem !important;
   transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease !important;
 }
 
-/* Transparent state when scrolled down */
+/* Glassmorphic transparent state when scrolled down */
 .header-curved.header-scrolled {
-  background: transparent !important;
-  border-color: transparent !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-/* Nav links turn white when fully transparent */
-.header-curved.header-scrolled .nav-links-curved a,
-.header-curved.header-scrolled .logo-text-codepen,
-.header-curved.header-scrolled .logo-sub {
-  color: #ffffff !important;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5) !important;
-}
-
-.header-curved.header-scrolled .nav-links-curved a:hover {
-  background: rgba(255, 255, 255, 0.15) !important;
-  color: #ffffff !important;
-}
-
-.header-curved.header-scrolled .contact-pill {
-  background: rgba(255, 255, 255, 0.15) !important;
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.65) !important;
+  border-color: rgba(255, 255, 255, 0.75) !important;
+  box-shadow: 0 12px 40px rgba(13, 13, 16, 0.1) !important;
+  backdrop-filter: blur(24px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
 }
 
 .nav-container-curved {
@@ -4453,17 +4434,19 @@ section {
   gap: 5px !important;
   width: 38px !important;
   height: 38px !important;
-  background: #ffffff !important;
-  border: 1.5px solid rgba(13,13,16,0.1) !important;
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
   border-radius: 10px !important;
   cursor: pointer !important;
-  box-shadow: 0 2px 8px rgba(13,13,16,0.08) !important;
+  box-shadow: 0 4px 12px rgba(13, 13, 16, 0.06) !important;
   transition: background 0.2s !important;
   flex-shrink: 0 !important;
 }
 
 .hamburger-btn:hover {
-  background: #f5f5f0 !important;
+  background: rgba(255, 255, 255, 0.75) !important;
 }
 
 .ham-bar {
@@ -4513,13 +4496,16 @@ section {
   right: 0 !important;
   height: 100dvh !important;
   width: min(300px, 80vw) !important;
-  background: #ffffff !important;
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(24px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+  border-left: 1.5px solid rgba(255, 255, 255, 0.6) !important;
   z-index: 1999 !important;
   display: flex !important;
   flex-direction: column !important;
   padding: 1.25rem !important;
   gap: 0 !important;
-  box-shadow: -8px 0 40px rgba(13, 13, 16, 0.18) !important;
+  box-shadow: -10px 0 40px rgba(13, 13, 16, 0.12) !important;
   transform: translateX(110%) !important;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
   overflow-y: auto !important;
@@ -4543,8 +4529,10 @@ section {
   width: 36px !important;
   height: 36px !important;
   border-radius: 50% !important;
-  border: 1.5px solid #ededea !important;
-  background: #f9f9f7 !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -4554,7 +4542,7 @@ section {
 }
 
 .mobile-nav-close:hover {
-  background: #ededea !important;
+  background: rgba(255, 255, 255, 0.85) !important;
 }
 
 /* ── Drawer nav links ────────────────────────────── */
@@ -5747,21 +5735,9 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
 /* --- Symmetric header fix --- */
 .header-curved {
-  position: fixed !important;
   top: 0.9rem !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
   width: min(88%, 920px) !important;
-  z-index: 1000 !important;
-  background: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border-radius: 999px !important;
-  border: 1.5px solid transparent !important;
-  box-shadow: none !important;
   padding: 0.55rem 1.1rem !important; /* EQUAL TOP & BOTTOM */
-  display: flex !important;
-  align-items: center !important;
 }
 
 /* --- Full-screen hero --- */
