@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2026_footer_rects_faculty">
+  <link rel="stylesheet" href="style.css?v=2026_video_bg">
   <!-- Lottie Web Animation Player -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
@@ -120,38 +120,47 @@
 
         <!-- RIGHT: Logo + Floral Design Card -->
         <div class="hero-right">
-          <!-- Main logo + floral hero card -->
-          <div class="hero-photo-card hero-photo-main hero-floral-card" style="background:linear-gradient(145deg,#edf7e0 0%,#f0f9ea 40%,#e8f4e0 100%) !important; border:2px solid rgba(191,213,143,0.4) !important; box-shadow: 0 20px 60px rgba(92,120,56,0.15) !important;">
+          <!-- Main logo + floral hero card (now with background video) -->
+          <div class="hero-photo-card hero-photo-main hero-floral-card" style="background:#0a0a0d !important; border:2px solid rgba(191,213,143,0.4) !important; box-shadow: 0 20px 60px rgba(92,120,56,0.15) !important; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:0 !important;">
+            
+            <!-- Looping background video -->
+            <video autoplay loop muted playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.55; z-index:0; pointer-events:none;">
+              <source src="https://player.vimeo.com/external/403789477.sd.mp4?s=7b63fb70c8c11e747b0e50f58f50c4ad43e26cf8&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+            </video>
 
+            <!-- Video overlay wrapper for content to stay on top -->
+            <div style="position:relative; z-index:1; width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:2rem; background:rgba(10,10,13,0.2); box-sizing:border-box;">
 
-            <!-- School Logo + label bar (side by side) -->
-            <div class="hero-logo-bar">
-              <!-- Logo -->
-              <img src="assets/logo.jpg" alt="Nalanda High School Crest" class="hero-logo-img">
+              <!-- School Logo + label bar (side by side) -->
+              <div class="hero-logo-bar">
+                <!-- Logo -->
+                <img src="assets/logo.jpg" alt="Nalanda High School Crest" class="hero-logo-img">
 
-              <!-- Divider -->
-              <div class="hero-logo-bar-divider"></div>
+                <!-- Divider -->
+                <div class="hero-logo-bar-divider"></div>
 
-              <!-- Label text -->
-              <div class="hero-logo-label" style="text-align:left; margin-top:0;">
-                <span class="hero-logo-years">45+ <span style="font-weight:500; font-size:0.85rem;">yrs</span></span>
-                <span class="hero-logo-yrs-sub">of Academic Excellence</span>
-                <span class="hero-logo-stars">★★★★★</span>
+                <!-- Label text -->
+                <div class="hero-logo-label" style="text-align:left; margin-top:0;">
+                  <span class="hero-logo-years">45+ <span style="font-weight:500; font-size:0.85rem;">yrs</span></span>
+                  <span class="hero-logo-yrs-sub">of Academic Excellence</span>
+                  <span class="hero-logo-stars">★★★★★</span>
+                </div>
               </div>
-            </div>
 
-            <!-- 50+ Expert Faculty bar -->
-            <div class="hero-faculty-bar" style="margin-top: 1rem; display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.96) !important; border: 1.5px solid rgba(191, 213, 143, 0.5) !important; border-radius: 999px !important; padding: 0.45rem 1.1rem !important; box-shadow: 0 4px 20px rgba(92, 120, 56, 0.12) !important; border-left: 4px solid #10b981 !important;">
-              <span class="fac-num" style="font-family: 'Inter', sans-serif; font-weight: 900; font-size: 1.05rem; color: #0d0d10; line-height: 1;">50+</span>
-              <div style="width: 1px; height: 16px; background: rgba(191, 213, 143, 0.5); flex-shrink: 0;"></div>
-              <span class="fac-lbl" style="font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; color: #4b5563; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap;">Expert Faculty Team</span>
-            </div>
+              <!-- 50+ Expert Faculty bar -->
+              <div class="hero-faculty-bar" style="margin-top: 1rem; display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.96) !important; border: 1.5px solid rgba(191, 213, 143, 0.5) !important; border-radius: 999px !important; padding: 0.45rem 1.1rem !important; box-shadow: 0 4px 20px rgba(92, 120, 56, 0.12) !important; border-left: 4px solid #10b981 !important;">
+                <span class="fac-num" style="font-family: 'Inter', sans-serif; font-weight: 900; font-size: 1.05rem; color: #0d0d10; line-height: 1;">50+</span>
+                <div style="width: 1px; height: 16px; background: rgba(191, 213, 143, 0.5); flex-shrink: 0;"></div>
+                <span class="fac-lbl" style="font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; color: #4b5563; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap;">Expert Faculty Team</span>
+              </div>
 
-            <!-- Smart Classrooms bar -->
-            <div class="hero-smart-bar" style="margin-top: 1rem; display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.96) !important; border: 1.5px solid rgba(191, 213, 143, 0.5) !important; border-radius: 999px !important; padding: 0.45rem 1.1rem !important; box-shadow: 0 4px 20px rgba(92, 120, 56, 0.12) !important; border-left: 4px solid #3b82f6 !important;">
-              <span class="smart-icon" style="display: inline-flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 1.05rem; line-height: 1;">🖥️</span>
-              <div style="width: 1px; height: 16px; background: rgba(191, 213, 143, 0.5); flex-shrink: 0;"></div>
-              <span class="smart-lbl" style="font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; color: #4b5563; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap;">Interactive Smart Classrooms</span>
+              <!-- Smart Classrooms bar -->
+              <div class="hero-smart-bar" style="margin-top: 1rem; display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.96) !important; border: 1.5px solid rgba(191, 213, 143, 0.5) !important; border-radius: 999px !important; padding: 0.45rem 1.1rem !important; box-shadow: 0 4px 20px rgba(92, 120, 56, 0.12) !important; border-left: 4px solid #3b82f6 !important;">
+                <span class="smart-icon" style="display: inline-flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 1.05rem; line-height: 1;">🖥️</span>
+                <div style="width: 1px; height: 16px; background: rgba(191, 213, 143, 0.5); flex-shrink: 0;"></div>
+                <span class="smart-lbl" style="font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; color: #4b5563; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap;">Interactive Smart Classrooms</span>
+              </div>
+
             </div>
 
           </div>
