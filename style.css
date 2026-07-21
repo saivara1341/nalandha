@@ -5789,13 +5789,14 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   padding-left: 0.1rem !important;
 }
 
-/* Hide desktop-only badge from mobile */
+/* hero-badge-mobile-only: show on mobile, hidden on desktop */
 .hero-badge-mobile-only {
-  display: none !important;
+  display: inline-flex !important; /* visible on mobile by default */
 }
 
 /* Header logo hidden in hero, revealed on scroll — desktop only */
 @media (min-width: 769px) {
+  /* Hide mobile-only badge on desktop */
   .hero-badge-mobile-only {
     display: none !important;
   }
@@ -5808,7 +5809,14 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     transition: opacity 0.4s ease, width 0.4s ease !important;
   }
 
-  /* Recenter nav when logo is hidden */
+  /* Shrink & center nav pill when logo is hidden */
+  .header-logo-hidden.header-curved {
+    width: min(60%, 640px) !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+  }
+
   .header-logo-hidden .nav-container-curved {
     justify-content: center !important;
   }
