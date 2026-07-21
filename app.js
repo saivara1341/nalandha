@@ -25,13 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroBrandLockup = document.getElementById('heroBrandLockup');
   const updateHeroLogoState = () => {
     if (window.innerWidth <= 768) return; // desktop only
-    if (!heroSection || !header) return;
-    const heroBottom = heroSection.getBoundingClientRect().bottom;
-    if (heroBottom > 80) {
-      // Still in hero — hide header logo
+    if (!header) return;
+    const target = heroBrandLockup || heroSection;
+    if (!target) return;
+    const targetBottom = target.getBoundingClientRect().bottom;
+    if (targetBottom > 80) {
+      // Brand lockup still visible — hide header logo
       header.classList.add('header-logo-hidden');
     } else {
-      // Scrolled past hero — show header logo
+      // Brand lockup scrolled out — show header logo
       header.classList.remove('header-logo-hidden');
     }
   };

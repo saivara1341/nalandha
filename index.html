@@ -90,14 +90,20 @@
         <!-- LEFT: Text Content -->
         <div class="hero-left">
 
-          <!-- Desktop-only hero brand lockup (crest + name) -->
+          <!-- Desktop-only hero brand lockup (crest + name + tagline) -->
           <div class="hero-brand-lockup hero-slide-in" id="heroBrandLockup" style="animation-delay: 0s;">
-            <img src="assets/logo.jpg" alt="Nalanda High School Crest" class="hero-brand-crest">
-            <span class="hero-brand-name">Nalanda High School</span>
+            <div class="hero-brand-top">
+              <img src="assets/logo.jpg" alt="Nalanda High School Crest" class="hero-brand-crest">
+              <span class="hero-brand-name">Nalanda High School</span>
+            </div>
+            <div class="hero-brand-tagline">
+              <span class="hero-badge-dot"></span>
+              Trusted School Since <span style="color: #ff5a5f; font-weight: 700;">1980</span> &bull; Nizamabad
+            </div>
           </div>
 
-          <!-- Eyebrow badge -->
-          <div class="hero-badge hero-slide-in" style="animation-delay: 0.1s;">
+          <!-- Eyebrow badge (mobile only — hidden on desktop) -->
+          <div class="hero-badge hero-slide-in hero-badge-mobile-only" style="animation-delay: 0.1s;">
             <span class="hero-badge-dot"></span>
             Trusted School Since <span style="color: #ff5a5f !important; font-weight: 700;">1980</span> &bull; Nizamabad
           </div>
@@ -524,7 +530,7 @@
               </article>
 
               <!-- NCC Card -->
-              <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 9; --fac-color: #15803d; --card-bg-img: url('assets/activities/athletics.jpg');">
+              <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 9; --fac-color: #15803d; --card-bg-img: url('assets/activities/ncc.jpg');">
                 <div class="fac-card-overlay"></div>
                 <div class="fac-card-content">
                   <div class="fac-card-top">
