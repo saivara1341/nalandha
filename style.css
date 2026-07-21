@@ -4047,16 +4047,18 @@ section {
 }
 
 .contact-form-panel {
-  padding: 1.1rem 1.25rem !important;
+  padding: 1.25rem 1.4rem !important;
   display: flex !important;
   flex-direction: column !important;
+  justify-content: flex-start !important;
+  height: 100% !important;
 }
 
 .panel-title {
-  font-size: 1rem !important;
+  font-size: 1.05rem !important;
   font-weight: 800 !important;
   color: #800000 !important; /* Maroon color */
-  margin-bottom: 1.35rem !important;
+  margin-bottom: 0.95rem !important;
 }
 
 .form-row-2 {
@@ -4117,8 +4119,8 @@ section {
 }
 
 .contact-map-panel {
-  height: auto !important;
-  min-height: auto !important;
+  height: 100% !important;
+  min-height: 100% !important;
   overflow: hidden !important;
   border-radius: 24px !important;
   display: flex !important;
@@ -4127,8 +4129,9 @@ section {
 
 .contact-map-panel iframe {
   width: 100% !important;
-  height: 320px !important;
-  min-height: 320px !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  flex: 1 !important;
   border: 0 !important;
 }
 
