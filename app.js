@@ -163,8 +163,8 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
-        const cardStart = (index - 1) / (numCards - 1);
-        const cardEnd = index / (numCards - 1);
+        const cardStart = (index - 1) / numCards;
+        const cardEnd = index / numCards;
 
         if (progress <= cardStart) {
           card.classList.remove('is-active');
