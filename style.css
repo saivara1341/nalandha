@@ -6159,7 +6159,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   width: 100% !important;
   gap: 24px !important;
   margin: 30px auto 0 auto !important;
-  height: 1280px !important; /* Perfect desktop height for 8 cards to stack cleanly */
+  height: 1400px !important; /* Locks page scroll until all 8 cards stack over STEM Lab card */
   align-items: center !important;
   overflow: visible !important;
   padding-bottom: 2rem !important;
@@ -6174,7 +6174,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   z-index: calc(10 + var(--stack-idx, 1)) !important;
   padding: 2.25rem 2.75rem !important;
   border-radius: 28px !important;
-  box-shadow: 0 -6px 20px rgba(0,0,0,0.04), 0 16px 38px rgba(13,13,16,0.1) !important;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.04), 0 16px 38px rgba(13,13,16,0.12) !important;
   border: none !important;
   min-height: 190px !important;
   transform: none !important;
@@ -7483,7 +7483,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     width: 100% !important;
     gap: 16px !important;
     margin: 20px auto !important;
-    height: 1800px !important; /* Fixed total height for smooth 8-card stacking */
+    height: 1800px !important; /* Locks mobile page scroll until all 8 cards stack over STEM Lab card */
     align-items: center !important;
     overflow: visible !important;
   }
