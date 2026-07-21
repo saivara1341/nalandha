@@ -6291,7 +6291,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   background-position: 0 0, 0 0, center !important;
   color: #ffffff !important;
   padding-top: 3rem !important;
-  padding-bottom: 2.5rem !important;
+  padding-bottom: 0 !important;
   position: relative !important;
   overflow: hidden !important;
   border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -6513,10 +6513,13 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 }
 
 .footer-bottom-premium {
-  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-  padding: 1rem 0 !important;
-  margin-top: 1.25rem !important;
-  background: rgba(0, 0, 0, 0.2) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: 1.25rem 0 !important;
+  margin-top: 1.5rem !important;
+  background: #040406 !important;
+  background-image: none !important;
+  position: relative !important;
+  z-index: 5 !important;
 }
 
 .bottom-premium-inner {
@@ -7437,7 +7440,7 @@ button[type="submit"].btn--primary:active {
 
   .hero-badge {
     font-size: 0.72rem !important;
-    padding: 0.45rem 1rem 0.45rem 1.5rem !important;
+    padding: 0.4rem 0.95rem 0.4rem 0.65rem !important;
     border-radius: 0 14px 14px 0 !important;
     align-self: flex-start !important;
     margin-left: -1.25rem !important;
