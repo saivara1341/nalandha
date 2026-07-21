@@ -5782,6 +5782,17 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   transition: opacity 0.4s ease !important;
 }
 
+/* --- Desktop: gap above Academic Foundation card & Expert Faculty card --- */
+@media (min-width: 769px) {
+  .col-left .stack-block {
+    margin-top: 1.5rem !important;
+  }
+
+  .col-right .experts {
+    margin-top: 1.5rem !important;
+  }
+}
+
 /* --- Full-screen hero --- */
 .hero-fullscreen {
   position: relative !important;
