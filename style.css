@@ -5805,10 +5805,35 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   .hero-badge-mobile-only {
     display: none !important;
   }
+
+  /* In Hero section: hide header logo + brand name, center nav links */
+  .header-logo-hidden .logo {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    margin-right: 0 !important;
+    overflow: hidden !important;
+    transition: opacity 0.35s ease, width 0.35s ease !important;
+  }
+
+  .header-logo-hidden .nav-container-curved {
+    justify-content: center !important;
+  }
+
+  .header-logo-hidden .nav-links-curved {
+    margin: 0 auto !important;
+  }
+
+  /* When scrolled down past hero brand: reveal logo & text in header */
+  .header-curved:not(.header-logo-hidden) .logo {
+    opacity: 1 !important;
+    width: auto !important;
+    transition: opacity 0.35s ease, width 0.35s ease !important;
+  }
 }
 
 .logo {
-  transition: opacity 0.4s ease !important;
+  transition: opacity 0.35s ease, width 0.35s ease !important;
 }
 
 /* --- Desktop: gap above Academic Foundation card & Expert Faculty card --- */
