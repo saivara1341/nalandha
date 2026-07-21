@@ -5811,18 +5811,20 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
                 max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
                 padding 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                left 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
                 background-color 0.4s ease, 
                 box-shadow 0.4s ease !important;
   }
 
-  /* 1) HERO STATE: Compact 550px pill wrapping [About -> Enquire Now], curved edge tight to About */
+  /* 1) HERO STATE: Compact pill placed on LEFT, aligned straight with hero crest & text */
   .header-curved.header-logo-hidden {
     width: min(90%, 550px) !important;
     max-width: 550px !important;
     padding: 0.42rem 0.65rem 0.42rem 0.75rem !important;
-    left: 50% !important;
+    left: calc((100vw - min(100vw - 3rem, 1280px)) / 2 + 1.5rem) !important;
     right: auto !important;
-    transform: translateX(-50%) !important;
+    transform: none !important;
   }
 
   .header-curved.header-logo-hidden .logo {
