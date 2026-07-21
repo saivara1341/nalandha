@@ -5873,7 +5873,8 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .hero-sub {
   font-family: 'Inter', sans-serif !important;
   font-size: 0.95rem !important;
-  color: #6b6a65 !important;
+  font-weight: 500 !important;
+  color: #4a4945 !important;
   line-height: 1.7 !important;
   max-width: 520px !important;
 }
