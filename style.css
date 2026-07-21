@@ -7509,6 +7509,7 @@ button[type="submit"].btn--primary:active {
 
   .hero-h1-light {
     font-size: 2rem !important;
+    font-weight: 800 !important;
   }
 
   .hero-h1-bold {
