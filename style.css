@@ -7425,7 +7425,14 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
   .hero-badge {
     font-size: 0.72rem !important;
-    padding: 0.3rem 0.85rem !important;
+    padding: 0.4rem 0.9rem 0.4rem 0.75rem !important;
+    border-radius: 8px !important;
+    border-top-left-radius: 0 !important;
+    align-self: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    border-left: 4px solid #10b981 !important;
+    box-shadow: 0 4px 14px rgba(13, 13, 16, 0.08) !important;
   }
 
   .hero-h1-light {
