@@ -5746,7 +5746,12 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   display: flex !important;
   align-items: center !important;
   overflow: hidden !important;
-  background: var(--bg, #efede8) !important;
+  background-image: 
+    linear-gradient(135deg, rgba(239, 237, 232, 0.86) 0%, rgba(239, 237, 232, 0.72) 50%, rgba(239, 237, 232, 0.86) 100%),
+    url('assets/school_building.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
   padding-top: 6rem !important;
   padding-bottom: 3rem !important;
 }
@@ -7371,6 +7376,12 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    background-image: 
+      linear-gradient(135deg, rgba(239, 237, 232, 0.88) 0%, rgba(239, 237, 232, 0.78) 50%, rgba(239, 237, 232, 0.88) 100%),
+      url('assets/school_building.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
     padding-top: 3.5rem !important;
     padding-bottom: 1.5rem !important;
     box-sizing: border-box !important;
