@@ -6301,13 +6301,19 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
    ========================================================= */
 
 .footer-premium {
-  background: radial-gradient(circle at 50% 0%, #151520 0%, #08080c 100%) !important;
+  background-color: #08080c !important;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, #151520 0%, #08080c 100%) !important;
+  background-size: 20px 20px, 20px 20px, 100% 100% !important;
+  background-position: 0 0, 0 0, center !important;
   color: #ffffff !important;
   padding-top: 3rem !important;
   padding-bottom: 0 !important;
   position: relative !important;
   overflow: hidden !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 .footer-glow-border {
