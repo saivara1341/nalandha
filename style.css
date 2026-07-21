@@ -5817,14 +5817,14 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
                 box-shadow 0.4s ease !important;
   }
 
-  /* 1) HERO STATE: Compact 630px pill placed on LEFT, aligned straight with hero crest & text */
+  /* 1) HERO STATE: Compact 630px pill centered on screen */
   .header-curved.header-logo-hidden {
     width: min(92%, 630px) !important;
     max-width: 630px !important;
     padding: 0.45rem 1rem !important;
-    left: calc((100vw - min(100vw - 3rem, 1280px)) / 2 + 1.5rem) !important;
+    left: 50% !important;
     right: auto !important;
-    transform: none !important;
+    transform: translateX(-50%) !important;
   }
 
   .header-curved.header-logo-hidden .logo {
