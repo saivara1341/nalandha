@@ -5772,10 +5772,12 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 }
 
 /* Header logo hidden in hero, revealed on scroll — desktop only */
-.header-logo-hidden .logo {
-  opacity: 0 !important;
-  pointer-events: none !important;
-  transition: opacity 0.4s ease !important;
+@media (min-width: 769px) {
+  .header-logo-hidden .logo {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.4s ease !important;
+  }
 }
 
 .logo {
@@ -7552,7 +7554,7 @@ button[type="submit"].btn--primary:active {
   .hero-badge {
     font-size: 0.72rem !important;
     padding: 0.4rem 0.95rem 0.4rem 0.65rem !important;
-    border-radius: 0 !important;
+    border-radius: 0 14px 14px 0 !important;
     align-self: flex-start !important;
     margin-left: -1.25rem !important;
     margin-right: auto !important;
@@ -7562,11 +7564,15 @@ button[type="submit"].btn--primary:active {
 
   .hero-h1-light {
     font-size: 2rem !important;
-    font-weight: 800 !important;
+    font-weight: 400 !important;
+    -webkit-text-stroke: 1.5px rgba(0,0,0,0.75) !important;
+    text-stroke: 1.5px rgba(0,0,0,0.75) !important;
   }
 
   .hero-h1-bold {
     font-size: 2.6rem !important;
+    -webkit-text-stroke: 1.5px rgba(255,255,255,0.4) !important;
+    text-stroke: 1.5px rgba(255,255,255,0.4) !important;
   }
 
   .hero-h1-accent-line {
