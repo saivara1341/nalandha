@@ -5794,12 +5794,14 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
 }
 
-/* hero-badge-mobile-only: hidden on desktop by default */
+/* hero-badge-mobile-only: strictly hidden on desktop (higher specificity) */
+.hero-badge.hero-badge-mobile-only,
 .hero-badge-mobile-only {
   display: none !important;
 }
 
 @media (min-width: 769px) {
+  .hero-badge.hero-badge-mobile-only,
   .hero-badge-mobile-only {
     display: none !important;
   }
@@ -8057,4 +8059,11 @@ button[type="submit"].btn--primary:active {
   }
 
 }
+
+/* Enforce single badge on desktop */
+@media (min-width: 769px) {
+  .hero-badge.hero-badge-mobile-only,
+  .hero-badge-mobile-only {
+    display: none !important;
+  }
 }
