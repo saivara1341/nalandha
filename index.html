@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2026_ncc_update">
+  <link rel="stylesheet" href="style.css?v=2026_desktop_row_align">
   <!-- Lottie Web Animation Player -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
@@ -90,15 +90,15 @@
         <!-- LEFT: Text Content -->
         <div class="hero-left">
 
-          <!-- Desktop-only hero brand lockup (crest + name + tagline) -->
+          <!-- Desktop-only hero brand lockup (crest + name + tagline in same row) -->
           <div class="hero-brand-lockup hero-slide-in" id="heroBrandLockup" style="animation-delay: 0s;">
             <div class="hero-brand-top">
               <img src="assets/logo.jpg" alt="Nalanda High School Crest" class="hero-brand-crest">
               <span class="hero-brand-name">Nalanda High School</span>
-            </div>
-            <div class="hero-brand-tagline">
-              <span class="hero-badge-dot"></span>
-              Trusted School Since <span style="color: #ff5a5f; font-weight: 700;">1980</span> &bull; Nizamabad
+              <div class="hero-brand-tagline">
+                <span class="hero-badge-dot"></span>
+                Trusted School Since <span style="color: #ff5a5f; font-weight: 700;">1980</span> &bull; Nizamabad
+              </div>
             </div>
           </div>
 
@@ -754,6 +754,10 @@
           <img src="assets/logo.jpg" alt="Nalanda High School Crest" class="footer-premium-logo">
           <div class="footer-brand-text">
             <span class="brand-title">Nalanda High School</span>
+            <span class="footer-tagline-inline">
+              <span class="hero-badge-dot"></span>
+              Trusted School Since <span style="color: #ff5a5f; font-weight: 700;">1980</span> &bull; Nizamabad
+            </span>
           </div>
         </a>
         <p class="footer-premium-desc">

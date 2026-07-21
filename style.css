@@ -5756,7 +5756,8 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .hero-brand-top {
   display: flex !important;
   align-items: center !important;
-  gap: 0.85rem !important;
+  gap: 1rem !important;
+  flex-wrap: wrap !important;
 }
 
 .hero-brand-crest {
@@ -5783,10 +5784,14 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   align-items: center !important;
   gap: 0.45rem !important;
   font-family: 'Inter', sans-serif !important;
-  font-size: 0.82rem !important;
+  font-size: 0.85rem !important;
   font-weight: 600 !important;
   color: #4a4945 !important;
-  padding-left: 0.1rem !important;
+  background: rgba(255, 255, 255, 0.65) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  padding: 0.3rem 0.8rem !important;
+  border-radius: 30px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
 }
 
 /* hero-badge-mobile-only: show on mobile, hidden on desktop */
@@ -6501,6 +6506,8 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
+  gap: 0.85rem !important;
+  flex-wrap: wrap !important;
 }
 
 .footer-brand-text .brand-title {
@@ -6513,7 +6520,19 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   white-space: nowrap !important;
 }
 
-/* brand-subtitle hidden — single line used */
+.footer-tagline-inline {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  color: #d1d5db !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  padding: 0.25rem 0.65rem !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
 
 .footer-premium-desc {
   font-family: 'Inter', sans-serif !important;
