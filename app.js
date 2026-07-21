@@ -127,5 +127,58 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => {
     revealObserver.observe(el);
   });
+
+  // ── Campus Facilities Pinned Card Stack Controller ────────
+  const pinWrapper = document.getElementById('facilityPinWrapper');
+  const facilityCards = document.querySelectorAll('.facility-stack-card');
+  const stepPill = document.getElementById('facilityStepPill');
+  const dots = document.querySelectorAll('.facility-dots .fac-dot');
+
+  if (pinWrapper && facilityCards.length > 0) {
+    const updateCardStack = () => {
+      const rect = pinWrapper.getBoundingClientRect();
+      const wrapperTop = rect.top;
+      const wrapperHeight = rect.height;
+      const windowHeight = window.innerHeight;
+
+      // Stick target top offset: 95px on desktop, 80px on mobile
+      const targetTop = window.innerWidth <= 768 ? 80 : 95;
+      const totalScrollable = wrapperHeight - windowHeight + targetTop;
+      const currentScroll = targetTop - wrapperTop;
+
+      if (totalScrollable <= 0) return;
+
+      let progress = currentScroll / totalScrollable;
+      progress = Math.max(0, Math.min(1, progress));
+
+      const numCards = facilityCards.length;
+      // Active card index ranges from 0 to 7 based on scroll progress
+      const activeIndex = Math.min(numCards - 1, Math.floor(progress * numCards));
+
+      facilityCards.forEach((card, index) => {
+        if (index === 0 || index <= activeIndex) {
+          card.classList.add('is-active');
+        } else {
+          card.classList.remove('is-active');
+        }
+      });
+
+      if (stepPill) {
+        stepPill.textContent = `Facility ${activeIndex + 1} of ${numCards}`;
+      }
+
+      dots.forEach((dot, index) => {
+        if (index <= activeIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', updateCardStack, { passive: true });
+    window.addEventListener('resize', updateCardStack, { passive: true });
+    updateCardStack();
+  }
 });
 

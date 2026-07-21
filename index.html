@@ -365,141 +365,156 @@
       </div>
     </section>
 
-            <!-- ============ CAMPUS FACILITIES (Sticky Card Stack Animation with Photo Backgrounds) ============ -->
+    <!-- ============ CAMPUS FACILITIES (Pinned Card Stack Animation) ============ -->
     <section id="facilities" class="facilities-section">
       <div class="container">
         <header class="section-header mx-auto text-center scroll-reveal" style="margin-bottom: 1.15rem;">
           <span class="eyebrow">Campus Facilities</span>
           <h2 class="section-title">Modern Infrastructure</h2>
-          <p class="section-desc">Scroll down to explore our 8 campus facilities.</p>
+          <p class="section-desc">Scroll to explore our 8 campus facilities stacked in place.</p>
+          
+          <div class="facility-progress-bar" id="facilityProgressBar">
+            <span class="facility-step-pill" id="facilityStepPill">Facility 1 of 8</span>
+            <div class="facility-dots">
+              <span class="fac-dot active"></span>
+              <span class="fac-dot"></span>
+              <span class="fac-dot"></span>
+              <span class="fac-dot"></span>
+              <span class="fac-dot"></span>
+              <span class="fac-dot"></span>
+              <span class="fac-dot"></span>
+              <span class="fac-dot"></span>
+            </div>
+          </div>
         </header>
 
-        <div class="sticky-stack-container" id="stickyFacilityStack">
-          <!-- 1. Science Lab -->
-          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 1; --fac-color: #2563eb; --card-bg-img: url('assets/school_hero.png');">
-            <div class="fac-card-overlay"></div>
-            <div class="fac-card-content">
-              <div class="fac-card-top">
-                <div class="fac-icon-ring">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31L3.75 20a1 1 0 0 0 .86 1.5h14.78a1 1 0 0 0 .86-1.5L14 9.31V2"/></svg>
+        <div class="facility-pin-wrapper" id="facilityPinWrapper">
+          <div class="sticky-stack-container" id="stickyFacilityStack">
+            <!-- 1. Science Lab -->
+            <article class="facility-stack-card clay-card fac-bg-card is-active" style="--stack-idx: 1; --fac-color: #2563eb; --card-bg-img: url('assets/school_hero.png');">
+              <div class="fac-card-overlay"></div>
+              <div class="fac-card-content">
+                <div class="fac-card-top">
+                  <div class="fac-icon-ring">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31L3.75 20a1 1 0 0 0 .86 1.5h14.78a1 1 0 0 0 .86-1.5L14 9.31V2"/></svg>
+                  </div>
+                  <span class="facility-badge">STEM</span>
                 </div>
-                <span class="facility-badge">STEM</span>
+                <h3 class="facility-title">Science Laboratory</h3>
+                <p class="facility-desc">Physics, chemistry, and biology setups with microscopes and safety equipment.</p>
               </div>
-              <h3 class="facility-title">Science Laboratory</h3>
-              <p class="facility-desc">Physics, chemistry, and biology setups with microscopes and safety equipment.</p>
-            </div>
-          </article>
+            </article>
 
-          <!-- 2. Computer Center -->
-          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 2; --fac-color: #0d9488; --card-bg-img: url('assets/school_building.jpg');">
-            <div class="fac-card-overlay"></div>
-            <div class="fac-card-content">
-              <div class="fac-card-top">
-                <div class="fac-icon-ring">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <!-- 2. Computer Center -->
+            <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 2; --fac-color: #0d9488; --card-bg-img: url('assets/school_building.jpg');">
+              <div class="fac-card-overlay"></div>
+              <div class="fac-card-content">
+                <div class="fac-card-top">
+                  <div class="fac-icon-ring">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                  </div>
+                  <span class="facility-badge">Digital</span>
                 </div>
-                <span class="facility-badge">Digital</span>
+                <h3 class="facility-title">Digital Computer Center</h3>
+                <p class="facility-desc">40-seat lab with high-speed internet and software suites for coding lessons.</p>
               </div>
-              <h3 class="facility-title">Digital Computer Center</h3>
-              <p class="facility-desc">40-seat lab with high-speed internet and software suites for coding lessons.</p>
-            </div>
-          </article>
+            </article>
 
-          <!-- 3. Resource Library -->
-          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 3; --fac-color: #7c3aed; --card-bg-img: url('assets/library.png');">
-            <div class="fac-card-overlay"></div>
-            <div class="fac-card-content">
-              <div class="fac-card-top">
-                <div class="fac-icon-ring">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <!-- 3. Resource Library -->
+            <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 3; --fac-color: #7c3aed; --card-bg-img: url('assets/library.png');">
+              <div class="fac-card-overlay"></div>
+              <div class="fac-card-content">
+                <div class="fac-card-top">
+                  <div class="fac-icon-ring">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  </div>
+                  <span class="facility-badge">2,000+ Titles</span>
                 </div>
-                <span class="facility-badge">2,000+ Titles</span>
+                <h3 class="facility-title">Resource Library</h3>
+                <p class="facility-desc">Over 2,000 reference guides, academic books, and fiction titles for reading.</p>
               </div>
-              <h3 class="facility-title">Resource Library</h3>
-              <p class="facility-desc">Over 2,000 reference guides, academic books, and fiction titles for reading.</p>
-            </div>
-          </article>
+            </article>
 
-          <!-- 4. Sports & Playground (New Sports Icon) -->
-          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 4; --fac-color: #ea580c; --card-bg-img: url('assets/activities/athletics.jpg');">
-            <div class="fac-card-overlay"></div>
-            <div class="fac-card-content">
-              <div class="fac-card-top">
-                <div class="fac-icon-ring">
-                  <!-- Trophy / Sports Icon -->
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M8 21h8M12 17v4"/>
-                    <path d="M7 4H5a2 2 0 0 0-2 2v2a4 4 0 0 0 4 4h.5"/>
-                    <path d="M17 4h2a2 2 0 0 1 2 2v2a4 4 0 0 1-4 4h-.5"/>
-                    <path d="M7 4h10v6a5 5 0 0 1-10 0V4z"/>
-                  </svg>
+            <!-- 4. Sports & Playground -->
+            <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 4; --fac-color: #ea580c; --card-bg-img: url('assets/activities/athletics.jpg');">
+              <div class="fac-card-overlay"></div>
+              <div class="fac-card-content">
+                <div class="fac-card-top">
+                  <div class="fac-icon-ring">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M8 21h8M12 17v4"/>
+                      <path d="M7 4H5a2 2 0 0 0-2 2v2a4 4 0 0 0 4 4h.5"/>
+                      <path d="M17 4h2a2 2 0 0 1 2 2v2a4 4 0 0 1-4 4h-.5"/>
+                      <path d="M7 4h10v6a5 5 0 0 1-10 0V4z"/>
+                    </svg>
+                  </div>
+                  <span class="facility-badge">Grounds</span>
                 </div>
-                <span class="facility-badge">Grounds</span>
+                <h3 class="facility-title">Sports &amp; Playground</h3>
+                <p class="facility-desc">Sprint tracks, long jump pits, kabaddi courts, volleyball nets, and indoor games.</p>
               </div>
-              <h3 class="facility-title">Sports &amp; Playground</h3>
-              <p class="facility-desc">Sprint tracks, long jump pits, kabaddi courts, volleyball nets, and indoor games.</p>
-            </div>
-          </article>
+            </article>
 
-          <!-- 5. Smart Classrooms (New Visual Screen Icon) -->
-          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 5; --fac-color: #16a34a; --card-bg-img: url('assets/smart_classroom.png');">
-            <div class="fac-card-overlay"></div>
-            <div class="fac-card-content">
-              <div class="fac-card-top">
-                <div class="fac-icon-ring">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="10" r="3"/><path d="M12 12l2 2"/></svg>
+            <!-- 5. Smart Classrooms -->
+            <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 5; --fac-color: #16a34a; --card-bg-img: url('assets/smart_classroom.png');">
+              <div class="fac-card-overlay"></div>
+              <div class="fac-card-content">
+                <div class="fac-card-top">
+                  <div class="fac-icon-ring">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="10" r="3"/><path d="M12 12l2 2"/></svg>
+                  </div>
+                  <span class="facility-badge">Visual</span>
                 </div>
-                <span class="facility-badge">Visual</span>
+                <h3 class="facility-title">Smart Classrooms</h3>
+                <p class="facility-desc">Interactive projector-equipped rooms enabling visual learning and e-content.</p>
               </div>
-              <h3 class="facility-title">Smart Classrooms</h3>
-              <p class="facility-desc">Interactive projector-equipped rooms enabling visual learning and e-content.</p>
-            </div>
-          </article>
+            </article>
 
-          <!-- 6. Cafeteria & Canteen (New Food/Utensils Icon) -->
-          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 6; --fac-color: #dc2626; --card-bg-img: url('assets/canteen.png');">
-            <div class="fac-card-overlay"></div>
-            <div class="fac-card-content">
-              <div class="fac-card-top">
-                <div class="fac-icon-ring">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            <!-- 6. Cafeteria & Canteen -->
+            <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 6; --fac-color: #dc2626; --card-bg-img: url('assets/canteen.png');">
+              <div class="fac-card-overlay"></div>
+              <div class="fac-card-content">
+                <div class="fac-card-top">
+                  <div class="fac-icon-ring">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                  </div>
+                  <span class="facility-badge">Hygienic</span>
                 </div>
-                <span class="facility-badge">Hygienic</span>
+                <h3 class="facility-title">Cafeteria &amp; Canteen</h3>
+                <p class="facility-desc">In-campus canteen serving nutritious mid-day meals under food safety standards.</p>
               </div>
-              <h3 class="facility-title">Cafeteria &amp; Canteen</h3>
-              <p class="facility-desc">In-campus canteen serving nutritious mid-day meals under food safety standards.</p>
-            </div>
-          </article>
+            </article>
 
-          <!-- 7. Medical & First-Aid Room -->
-          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 7; --fac-color: #0284c7; --card-bg-img: url('assets/medical_room.png');">
-            <div class="fac-card-overlay"></div>
-            <div class="fac-card-content">
-              <div class="fac-card-top">
-                <div class="fac-icon-ring">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <!-- 7. Medical & First-Aid Room -->
+            <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 7; --fac-color: #0284c7; --card-bg-img: url('assets/medical_room.png');">
+              <div class="fac-card-overlay"></div>
+              <div class="fac-card-content">
+                <div class="fac-card-top">
+                  <div class="fac-icon-ring">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                  </div>
+                  <span class="facility-badge">First Aid</span>
                 </div>
-                <span class="facility-badge">First Aid</span>
+                <h3 class="facility-title">Medical &amp; First-Aid Room</h3>
+                <p class="facility-desc">First-aid centre with trained staff and basic emergency medicines for student care.</p>
               </div>
-              <h3 class="facility-title">Medical &amp; First-Aid Room</h3>
-              <p class="facility-desc">First-aid centre with trained staff and basic emergency medicines for student care.</p>
-            </div>
-          </article>
+            </article>
 
-          <!-- 8. Assembly & Prayer Hall -->
-          <article class="facility-stack-card clay-card fac-bg-card scroll-reveal" style="--stack-idx: 8; --fac-color: #ca8a04; --card-bg-img: url('assets/activities/annual_day.jpg');">
-            <div class="fac-card-overlay"></div>
-            <div class="fac-card-content">
-              <div class="fac-card-top">
-                <div class="fac-icon-ring">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            <!-- 8. Assembly & Prayer Hall -->
+            <article class="facility-stack-card clay-card fac-bg-card" style="--stack-idx: 8; --fac-color: #ca8a04; --card-bg-img: url('assets/activities/annual_day.jpg');">
+              <div class="fac-card-overlay"></div>
+              <div class="fac-card-content">
+                <div class="fac-card-top">
+                  <div class="fac-icon-ring">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                  </div>
+                  <span class="facility-badge">Assembly</span>
                 </div>
-                <span class="facility-badge">Assembly</span>
+                <h3 class="facility-title">Assembly &amp; Prayer Hall</h3>
+                <p class="facility-desc">Covered hall hosting morning assemblies, prayer sessions, and school events.</p>
               </div>
-              <h3 class="facility-title">Assembly &amp; Prayer Hall</h3>
-              <p class="facility-desc">Covered hall hosting morning assemblies, prayer sessions, and school events.</p>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </div>
     </section>
