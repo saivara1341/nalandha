@@ -20,26 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     onScroll();
   }
 
-  // ── Desktop: Hide header logo in hero, reveal on scroll ───
-  const heroSection = document.getElementById('home');
-  const heroBrandLockup = document.getElementById('heroBrandLockup');
-  const updateHeroLogoState = () => {
-    if (window.innerWidth <= 768) return; // desktop only
-    if (!header) return;
-    const target = heroBrandLockup || heroSection;
-    if (!target) return;
-    const targetBottom = target.getBoundingClientRect().bottom;
-    if (targetBottom > 80) {
-      // Brand lockup still visible — hide header logo
-      header.classList.add('header-logo-hidden');
-    } else {
-      // Brand lockup scrolled out — show header logo
-      header.classList.remove('header-logo-hidden');
-    }
-  };
-  window.addEventListener('scroll', updateHeroLogoState, { passive: true });
-  window.addEventListener('resize', updateHeroLogoState, { passive: true });
-  updateHeroLogoState();
 
   // ── Mobile navigation drawer ───────────────────────────────
   const hamburgerBtn  = document.getElementById('hamburger-btn');
