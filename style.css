@@ -7497,7 +7497,7 @@ button[type="submit"].btn--primary:active {
   .hero-badge {
     font-size: 0.72rem !important;
     padding: 0.4rem 0.95rem 0.4rem 0.65rem !important;
-    border-radius: 0 14px 14px 0 !important;
+    border-radius: 0 !important;
     align-self: flex-start !important;
     margin-left: -1.25rem !important;
     margin-right: auto !important;
