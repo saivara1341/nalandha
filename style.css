@@ -4781,23 +4781,25 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 }
 
 .logo-text-codepen {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
-  font-size: 1.35rem !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-weight: 900 !important;
-  letter-spacing: -0.04em !important;
-  color: #0d0d10 !important; /* var(--ink) */
+  font-size: 1.05rem !important;
+  letter-spacing: -0.03em !important;
   line-height: 1 !important;
-  display: flex !important;
-  flex-direction: column !important;
+  color: #0d0d10 !important;
+  white-space: nowrap !important;
+  display: inline-block !important;
 }
 
 .logo-text-codepen .logo-sub {
-  font-size: 0.62rem !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
-  color: #8a8780 !important; /* var(--mute) */
-  margin-top: 2px !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  letter-spacing: inherit !important;
+  text-transform: none !important;
+  color: inherit !important;
+  margin-top: 0 !important;
+  display: inline !important;
 }
 
 
@@ -7365,6 +7367,22 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
   .nav-links-curved {
     display: none !important; /* hide on mobile — use Enquire button */
+  }
+
+  .logo-text-codepen {
+    font-size: 0.95rem !important;
+    font-weight: 900 !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+
+  .logo-text-codepen .logo-sub {
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    color: inherit !important;
+    display: inline !important;
+    text-transform: none !important;
+    margin-top: 0 !important;
   }
 
   .contact-pill {
