@@ -5815,10 +5815,10 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
                 box-shadow 0.4s ease !important;
   }
 
-  /* 1) HERO STATE: Compact pill wrapping [About -> Enquire Now], curved edge tight to About */
+  /* 1) HERO STATE: Compact 550px pill wrapping [About -> Enquire Now], curved edge tight to About */
   .header-curved.header-logo-hidden {
-    width: fit-content !important;
-    max-width: min(92%, 640px) !important;
+    width: min(90%, 550px) !important;
+    max-width: 550px !important;
     padding: 0.42rem 0.65rem 0.42rem 0.75rem !important;
     left: 50% !important;
     right: auto !important;
@@ -5826,22 +5826,25 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   }
 
   .header-curved.header-logo-hidden .logo {
+    display: none !important;
     opacity: 0 !important;
     pointer-events: none !important;
     width: 0 !important;
-    margin-right: 0 !important;
+    margin: 0 !important;
     padding: 0 !important;
     overflow: hidden !important;
     transition: opacity 0.35s ease, width 0.35s ease, margin 0.35s ease !important;
   }
 
   .header-curved.header-logo-hidden .nav-container-curved {
-    justify-content: center !important;
-    gap: 0.85rem !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+    gap: 0.5rem !important;
   }
 
   .header-curved.header-logo-hidden .nav-links-curved {
     margin: 0 !important;
+    gap: 1.1rem !important;
   }
 
   /* 2) SCROLLED STATE: Expanded pill showing Logo Crest + Name on left */
