@@ -5806,15 +5806,16 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     display: none !important;
   }
 
-  /* --- DYNAMIC NAVBAR PILL TRANSITION --- */
+  /* --- DYNAMIC NAVBAR PILL TRANSITION (top controlled by JS) --- */
   .header-curved {
-    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-                max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-                padding 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-                left 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-                background-color 0.4s ease, 
-                box-shadow 0.4s ease !important;
+    transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                max-width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                padding 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                top 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                left 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.35s ease,
+                box-shadow 0.35s ease !important;
   }
 
   /* 1) HERO STATE: Compact 630px pill centered on screen */

@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     onScroll();
   }
 
-  // ── Desktop: Hide header logo in hero, reveal when hero brand is scrolled ───
+  // ── Desktop: Position nav pill inline with hero brand, reveal with logo on scroll ───
   const heroBrandLockup = document.getElementById('heroBrandLockup');
   const heroSection = document.getElementById('home');
   const updateHeroLogoState = () => {
@@ -28,13 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!header) return;
     const target = heroBrandLockup || heroSection;
     if (!target) return;
-    const targetBottom = target.getBoundingClientRect().bottom;
-    if (targetBottom > 70) {
-      // In hero — hide header logo & text
+    const lockupRect = target.getBoundingClientRect();
+    const lockupBottom = lockupRect.bottom;
+
+    if (lockupBottom > 70) {
+      // In hero — hide header logo, position pill inline with brand lockup
       header.classList.add('header-logo-hidden');
+      const headerH = header.offsetHeight;
+      // Vertically center the pill on the hero brand lockup row
+      const targetTop = lockupRect.top + (lockupRect.height / 2) - (headerH / 2);
+      header.style.top = Math.max(8, targetTop) + 'px';
     } else {
-      // Scrolled past hero brand — reveal header logo
+      // Scrolled past hero brand — reveal logo, move to standard top position
       header.classList.remove('header-logo-hidden');
+      header.style.top = '';  // reset to CSS default (0.9rem)
     }
   };
   window.addEventListener('scroll', updateHeroLogoState, { passive: true });
