@@ -6277,6 +6277,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .facility-stack-card:nth-child(6) { z-index: 15 !important; }
 .facility-stack-card:nth-child(7) { z-index: 16 !important; }
 .facility-stack-card:nth-child(8) { z-index: 17 !important; }
+.facility-stack-card:nth-child(9) { z-index: 18 !important; }
 
 .facility-stack-card.is-active {
   transform: translateY(0) !important;
