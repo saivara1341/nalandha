@@ -25,21 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroSection = document.getElementById('home');
   const updateHeroLogoState = () => {
     if (window.innerWidth <= 768) return; // desktop only
-    if (!header) return;
-    const target = heroBrandLockup || heroSection;
-    if (!target) return;
-    const lockupRect = target.getBoundingClientRect();
-    const lockupBottom = lockupRect.bottom;
+    if (!header || !heroSection) return;
 
-    if (lockupBottom > 70) {
-      // In hero — hide header logo, position pill inline with brand lockup
+    const heroRect = heroSection.getBoundingClientRect();
+    const heroBottom = heroRect.bottom;
+
+    if (heroBottom > 120) {
+      // In hero — show hero brand block, position pill at hero's Y middle
       header.classList.add('header-logo-hidden');
       const headerH = header.offsetHeight;
-      // Vertically center the pill on the hero brand lockup row
-      const targetTop = lockupRect.top + (lockupRect.height / 2) - (headerH / 2);
+      const targetTop = heroRect.top + (heroRect.height * 0.12); // near top of hero section
       header.style.top = Math.max(8, targetTop) + 'px';
     } else {
-      // Scrolled past hero brand — reveal logo, move to standard top position
+      // Scrolled past hero — reveal small logo, move to standard top position
       header.classList.remove('header-logo-hidden');
       header.style.top = '';  // reset to CSS default (0.9rem)
     }
