@@ -6361,8 +6361,10 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
 .footer-premium-badges {
   display: flex !important;
-  flex-direction: column !important;
-  gap: 0.5rem !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
 }
 
 .footer-badge-chip {
@@ -7652,11 +7654,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   }
 
   .footer-contact-column {
-    grid-column: 1 / -1 !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    border-top: 1px solid rgba(255,255,255,0.08) !important;
-    padding-top: 1rem !important;
+    display: none !important;
   }
 
   .footer-premium {
@@ -7741,7 +7739,5 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     grid-template-columns: 1fr !important;
   }
 
-  .footer-contact-column {
-    grid-column: auto !important;
-  }
+}
 }
