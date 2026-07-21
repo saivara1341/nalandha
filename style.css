@@ -6184,7 +6184,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .facility-pin-wrapper {
   position: relative !important;
   width: 100% !important;
-  height: 3200px !important;
+  height: 3600px !important;
   overflow: visible !important;
 }
 
@@ -7614,7 +7614,7 @@ button[type="submit"].btn--primary:active {
   }
 
   .facility-pin-wrapper {
-    height: 2600px !important;
+    height: 2900px !important;
   }
 
   .facility-sticky-stage {
