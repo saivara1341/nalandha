@@ -6184,9 +6184,18 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   overflow: visible !important;
 }
 
+#facilities .section-header {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+  max-width: 950px !important;
+}
+
 .facility-sticky-stage {
   position: sticky !important;
-  top: 85px !important;
+  top: 110px !important;
   width: 100% !important;
   display: flex !important;
   flex-direction: column !important;
@@ -7527,11 +7536,11 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
   .facility-sticky-stage {
     position: sticky !important;
-    top: 65px !important;
+    top: 90px !important;
     width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     z-index: 10 !important;
   }
 
