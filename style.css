@@ -6309,8 +6309,8 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
 .footer-grid-layout {
   display: grid !important;
-  grid-template-columns: 1.4fr 1.2fr 0.8fr 1fr !important;
-  gap: 1.75rem !important;
+  grid-template-columns: 1.85fr 1.15fr 0.85fr 1.15fr !important;
+  gap: 3rem !important;
   margin-bottom: 2.5rem !important;
   position: relative !important;
   z-index: 2 !important;
@@ -6319,7 +6319,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .footer-brand-column {
   display: flex !important;
   flex-direction: column !important;
-  gap: 0.85rem !important;
+  gap: 1rem !important;
 }
 
 .footer-logo-wrap {
@@ -6372,7 +6372,8 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .footer-premium-badges {
   display: flex !important;
   flex-direction: row !important;
-  flex-wrap: wrap !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
   align-items: center !important;
   gap: 0.75rem !important;
 }
