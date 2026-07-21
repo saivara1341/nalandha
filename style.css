@@ -5744,6 +5744,44 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   padding: 0.55rem 1.1rem !important; /* EQUAL TOP & BOTTOM */
 }
 
+/* --- Hero Brand Lockup (Desktop: crest + name above headline) --- */
+.hero-brand-lockup {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.85rem !important;
+  margin-bottom: 1.75rem !important;
+}
+
+.hero-brand-crest {
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  box-shadow: 0 4px 20px rgba(13, 13, 16, 0.18) !important;
+  border: 3px solid rgba(255, 255, 255, 0.9) !important;
+  flex-shrink: 0 !important;
+}
+
+.hero-brand-name {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 1.55rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.04em !important;
+  color: #0d0d10 !important;
+  line-height: 1.1 !important;
+}
+
+/* Header logo hidden in hero, revealed on scroll — desktop only */
+.header-logo-hidden .logo {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.4s ease !important;
+}
+
+.logo {
+  transition: opacity 0.4s ease !important;
+}
+
 /* --- Full-screen hero --- */
 .hero-fullscreen {
   position: relative !important;
@@ -7460,6 +7498,10 @@ button[type="submit"].btn--primary:active {
   }
 
   /* ── HERO ────────────────────────────────────────────── */
+  .hero-brand-lockup {
+    display: none !important;
+  }
+
   .hero-fullscreen {
     min-height: 100dvh !important;
     height: 100dvh !important;
