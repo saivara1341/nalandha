@@ -141,8 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const wrapperHeight = rect.height;
       const windowHeight = window.innerHeight;
 
-      // Target top offset: 95px on desktop, 80px on mobile
-      const targetTop = window.innerWidth <= 768 ? 80 : 95;
+      // Target top offset: 85px on desktop, 65px on mobile
+      const targetTop = window.innerWidth <= 768 ? 65 : 85;
       const totalScrollable = wrapperHeight - windowHeight + targetTop;
       const currentScroll = targetTop - wrapperTop;
 

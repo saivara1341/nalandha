@@ -6180,13 +6180,22 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .facility-pin-wrapper {
   position: relative !important;
   width: 100% !important;
-  height: 2800px !important;
+  height: 3200px !important;
   overflow: visible !important;
 }
 
-.sticky-stack-container {
+.facility-sticky-stage {
   position: sticky !important;
-  top: 95px !important;
+  top: 85px !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  z-index: 10 !important;
+}
+
+.sticky-stack-container {
+  position: relative !important;
   max-width: 950px !important;
   width: 100% !important;
   height: 380px !important;
@@ -7513,11 +7522,22 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   }
 
   .facility-pin-wrapper {
-    height: 2400px !important;
+    height: 2600px !important;
+  }
+
+  .facility-sticky-stage {
+    position: sticky !important;
+    top: 65px !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    z-index: 10 !important;
   }
 
   .sticky-stack-container {
-    top: 80px !important;
+    position: relative !important;
+    top: auto !important;
     max-width: 100% !important;
     height: 380px !important;
   }
