@@ -141,25 +141,45 @@ document.addEventListener('DOMContentLoaded', () => {
       const wrapperHeight = rect.height;
       const windowHeight = window.innerHeight;
 
-      // Stick target top offset: 95px on desktop, 80px on mobile
+      // Target top offset: 95px on desktop, 80px on mobile
       const targetTop = window.innerWidth <= 768 ? 80 : 95;
       const totalScrollable = wrapperHeight - windowHeight + targetTop;
       const currentScroll = targetTop - wrapperTop;
 
-      if (totalScrollable <= 0) return;
-
-      let progress = currentScroll / totalScrollable;
-      progress = Math.max(0, Math.min(1, progress));
+      let progress = 0;
+      if (totalScrollable > 0) {
+        progress = currentScroll / totalScrollable;
+        progress = Math.max(0, Math.min(1, progress));
+      }
 
       const numCards = facilityCards.length;
-      // Active card index ranges from 0 to 7 based on scroll progress
       const activeIndex = Math.min(numCards - 1, Math.floor(progress * numCards));
 
       facilityCards.forEach((card, index) => {
-        if (index === 0 || index <= activeIndex) {
+        if (index === 0) {
           card.classList.add('is-active');
-        } else {
+          card.style.transform = 'translateY(0%)';
+          card.style.opacity = '1';
+          return;
+        }
+
+        const cardStart = (index - 1) / (numCards - 1);
+        const cardEnd = index / (numCards - 1);
+
+        if (progress <= cardStart) {
           card.classList.remove('is-active');
+          card.style.transform = 'translateY(115%)';
+          card.style.opacity = '0';
+        } else if (progress >= cardEnd) {
+          card.classList.add('is-active');
+          card.style.transform = 'translateY(0%)';
+          card.style.opacity = '1';
+        } else {
+          card.classList.add('is-active');
+          const cardProgress = (progress - cardStart) / (cardEnd - cardStart);
+          const translateY = (1 - cardProgress) * 115;
+          card.style.transform = `translateY(${translateY.toFixed(2)}%)`;
+          card.style.opacity = `${cardProgress.toFixed(2)}`;
         }
       });
 

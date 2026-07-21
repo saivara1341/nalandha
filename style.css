@@ -2256,8 +2256,8 @@ body {
 
 .facilities-section {
   position: relative;
-  background: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(8px);
+  background: #ffffff !important;
+  backdrop-filter: none !important;
 }
 
 
