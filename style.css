@@ -6774,7 +6774,7 @@ button[type="submit"]:hover {
 }
 
 .footer-logo-wrap:hover .footer-premium-logo {
-  transform: rotate(15deg) scale(1.05) !important;
+  transform: none !important;
 }
 
 .footer-brand-text {
