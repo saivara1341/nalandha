@@ -5801,10 +5801,6 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 }
 
 @media (min-width: 769px) {
-  .hero-badge.hero-badge-mobile-only,
-  .hero-badge-mobile-only {
-    display: none !important;
-  }
 
   /* --- DESKTOP NAVBAR PILL LAYOUT --- */
   .header-curved {
