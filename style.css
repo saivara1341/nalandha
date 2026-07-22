@@ -5806,7 +5806,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     display: none !important;
   }
 
-  /* --- DESKTOP NAVBAR LAYOUT: Nav Links & Button LEFT, Logo & School Name RIGHT --- */
+  /* --- DESKTOP NAVBAR LAYOUT: Logo & School Name FIRST (Left), Nav Links & Button (Right) --- */
   .header-curved {
     top: 1rem !important;
     left: 50% !important;
@@ -5815,7 +5815,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     max-width: 1120px !important;
     background: #ffffff !important;
     border: 1px solid rgba(0, 0, 0, 0.08) !important;
-    padding: 0.45rem 1rem 0.45rem 1.5rem !important;
+    padding: 0.45rem 0.8rem 0.45rem 1.25rem !important;
     border-radius: 999px !important;
     box-shadow: 0 10px 32px rgba(13, 13, 16, 0.12) !important;
     z-index: 1000 !important;
@@ -5829,12 +5829,21 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     width: 100% !important;
   }
 
-  /* LEFT SIDE: Navigation Links + Enquire Now Button */
-  .header-left-nav {
+  /* 1st: Logo Crest & School Name (Left-aligned) */
+  .logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    margin-right: auto !important;
+    text-decoration: none !important;
+  }
+
+  /* 2nd: Navigation Links + Enquire Now Button (Right-aligned) */
+  .header-right-nav {
     display: flex !important;
     align-items: center !important;
     gap: 1.5rem !important;
-    margin-right: auto !important;
+    margin-left: auto !important;
   }
 
   .nav-links-curved {
@@ -5864,15 +5873,6 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   .nav-right-group {
     display: flex !important;
     align-items: center !important;
-  }
-
-  /* RIGHT SIDE: Logo Crest & School Name */
-  .logo {
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.65rem !important;
-    margin-left: auto !important;
-    text-decoration: none !important;
   }
 
   /* Desktop-only outline for "Shaping" in hero heading */

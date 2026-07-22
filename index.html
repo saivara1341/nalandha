@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2026_left_nav_links_right_logo">
+  <link rel="stylesheet" href="style.css?v=2026_logo_first_nav_links_after">
   <!-- Lottie Web Animation Player -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
@@ -24,11 +24,19 @@
   <div class="grain"></div>
 
 
-  <!-- Header Navigation (Left-aligned nav links & button, Right-aligned logo & school name) -->
+  <!-- Header Navigation (Logo & School Name FIRST on left, Nav Links & Button on right) -->
   <header class="header nav header-curved">
     <div class="nav-container-curved">
-      <!-- Left side: Nav links & Enquire button -->
-      <div class="header-left-nav">
+      <!-- 1st: Logo Crest & School Name -->
+      <a href="#home" class="logo" aria-label="Nalanda High School Home" style="text-decoration:none;">
+        <img class="logo-img" src="assets/logo.jpg" alt="Nalanda High School Crest" style="width:42px; height:42px; border-radius:50%; object-fit:cover; flex-shrink:0; border:2px solid rgba(255,255,255,0.95); box-shadow:0 3px 10px rgba(0,0,0,0.12);">
+        <div class="logo-text-codepen" style="font-family:'Inter',system-ui,sans-serif; font-weight:900; font-size:1.35rem; letter-spacing:-0.04em; line-height:1; color:#0d0d10; white-space:nowrap;">
+          Nalanda <span class="logo-sub" style="font-family:'Inter',system-ui,sans-serif; font-weight:900; letter-spacing:-0.04em; color:#0d0d10;">High School</span>
+        </div>
+      </a>
+
+      <!-- 2nd: Nav links & Enquire button -->
+      <div class="header-right-nav">
         <ul class="nav-links nav-links-curved">
           <li><a href="#about">About</a></li>
           <li><a href="#academics">Academics</a></li>
@@ -49,14 +57,6 @@
           </button>
         </div>
       </div>
-
-      <!-- Right side: Logo & School Name -->
-      <a href="#home" class="logo" aria-label="Nalanda High School Home" style="text-decoration:none;">
-        <img class="logo-img" src="assets/logo.jpg" alt="Nalanda High School Crest" style="width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0; border:2px solid rgba(255,255,255,0.95); box-shadow:0 3px 10px rgba(0,0,0,0.12);">
-        <div class="logo-text-codepen" style="font-family:'Inter',system-ui,sans-serif; font-weight:900; font-size:1.35rem; letter-spacing:-0.04em; line-height:1; color:#0d0d10; white-space:nowrap;">
-          Nalanda <span class="logo-sub" style="font-family:'Inter',system-ui,sans-serif; font-weight:900; letter-spacing:-0.04em; color:#0d0d10;">High School</span>
-        </div>
-      </a>
     </div>
   </header>
 
