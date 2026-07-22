@@ -7935,14 +7935,16 @@ button[type="submit"].btn--primary:active {
     text-stroke: 1.5px rgba(255,255,255,0.4) !important;
   }
 
-  .hero-h1-accent-line {
-    font-size: 1.6rem !important;
+  .hero-h1 {
+    margin-bottom: 1.25rem !important;
   }
 
   .hero-sub {
     font-size: 0.88rem !important;
     max-width: 100% !important;
     text-align: center !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 1.25rem !important;
   }
 
   .hero-stats {
