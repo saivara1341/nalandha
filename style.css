@@ -6033,66 +6033,32 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .hero-scroll-indicator {
   display: none !important;
   position: absolute !important;
-  bottom: 1.15rem !important;
+  bottom: 1.25rem !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
   z-index: 10 !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  gap: 4px !important;
-  text-decoration: none !important;
-  cursor: pointer !important;
-}
-
-.scroll-circle-btn {
-  width: 42px !important;
-  height: 42px !important;
-  border-radius: 50% !important;
-  background: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-  border: 1.5px solid rgba(30, 58, 138, 0.25) !important;
-  color: #1e3a8a !important;
-  display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  box-shadow: 0 4px 16px rgba(13, 13, 16, 0.12), 0 0 0 4px rgba(30, 58, 138, 0.08) !important;
-  animation: heroBounceCircle 2s ease-in-out infinite !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-}
-
-.scroll-circle-btn svg {
-  stroke: #1e3a8a !important;
-  animation: heroArrowSlide 2s ease-in-out infinite !important;
-}
-
-.scroll-text-lbl {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 0.68rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
   color: #1e3a8a !important;
-  opacity: 0.85 !important;
+  opacity: 0.75 !important;
+  transition: opacity 0.25s ease !important;
 }
 
-@keyframes heroBounceCircle {
+.hero-scroll-indicator svg {
+  stroke: #1e3a8a !important;
+  animation: heroMinimalBounce 1.8s ease-in-out infinite !important;
+}
+
+@keyframes heroMinimalBounce {
   0%, 100% {
     transform: translateY(0);
-    box-shadow: 0 4px 16px rgba(13, 13, 16, 0.12), 0 0 0 4px rgba(30, 58, 138, 0.08);
+    opacity: 0.6;
   }
   50% {
-    transform: translateY(7px);
-    box-shadow: 0 8px 20px rgba(13, 13, 16, 0.18), 0 0 0 6px rgba(30, 58, 138, 0.14);
-  }
-}
-
-@keyframes heroArrowSlide {
-  0%, 100% {
-    transform: translateY(-1px);
-  }
-  50% {
-    transform: translateY(2px);
+    transform: translateY(6px);
+    opacity: 1;
   }
 }
 
