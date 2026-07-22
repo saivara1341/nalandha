@@ -6031,7 +6031,7 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 
 /* ============ HERO SCROLL DOWN ANIMATION (MOBILE FOCUS) ============ */
 .hero-scroll-indicator {
-  display: none !important;
+  display: flex !important;
   position: absolute !important;
   bottom: 1.25rem !important;
   left: 50% !important;
