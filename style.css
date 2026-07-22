@@ -6029,6 +6029,78 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   z-index: 0 !important;
 }
 
+/* ============ LEADERSHIP & MANAGEMENT SHOWCASE ============ */
+.leadership-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1.75rem !important;
+  margin-top: 1.5rem !important;
+}
+
+.leadership-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  background: #ffffff !important;
+  border-radius: 20px !important;
+  padding: 1.25rem 1rem !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.leadership-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 40px rgba(128, 0, 0, 0.12) !important;
+}
+
+.leadership-img-wrapper {
+  width: 100% !important;
+  max-width: 220px !important;
+  height: 220px !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  margin-bottom: 1rem !important;
+  border: 3px solid #ffffff !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+  background: #f4f4f5 !important;
+}
+
+.leadership-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+  transition: transform 0.4s ease !important;
+}
+
+.leadership-card:hover .leadership-img {
+  transform: scale(1.05) !important;
+}
+
+.leader-name {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  color: #0d0d10 !important;
+  letter-spacing: -0.01em !important;
+  margin-bottom: 0.25rem !important;
+  text-transform: uppercase !important;
+}
+
+.leader-role {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  color: #800000 !important;
+  background: rgba(128, 0, 0, 0.06) !important;
+  border: 1px solid rgba(128, 0, 0, 0.12) !important;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 999px !important;
+  display: inline-block !important;
+}
+
 .hero-blob {
   display: none !important;
 }
