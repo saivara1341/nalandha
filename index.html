@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2026_hero_brand_in_header">
+  <link rel="stylesheet" href="style.css?v=2026_reverted_to_previous_nav">
   <!-- Lottie Web Animation Player -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
@@ -25,22 +25,8 @@
 
 
     <!-- Header Navigation (Curved Floating Pill Shape) -->
-  <header class="header nav header-curved">
+  <header class="header nav header-curved" style="padding-top:0.55rem !important; padding-bottom:0.55rem !important; padding-left:1rem !important; padding-right:1rem !important;">
     <div class="nav-container-curved">
-
-      <!-- Hero-state brand (desktop only: crest + name + tagline shown when logo hidden) -->
-      <a href="#home" class="header-hero-brand" aria-label="Nalanda High School Home">
-        <img src="assets/logo.jpg" alt="Nalanda High School Crest" class="header-hero-crest">
-        <div class="header-hero-text">
-          <span class="header-hero-name">Nalanda High School</span>
-          <span class="header-hero-tagline">
-            <span class="hero-badge-dot"></span>
-            Trusted School Since <span style="color:#ff5a5f;font-weight:700;">1980</span> &bull; Nizamabad
-          </span>
-        </div>
-      </a>
-
-      <!-- Standard small logo (shown when scrolled) -->
       <a href="#home" class="logo" aria-label="Nalanda High School Home" style="text-decoration:none;">
         <img class="logo-img" src="assets/logo.jpg" alt="Nalanda High School Crest" style="width:34px; height:34px; border-radius:50%; object-fit:cover; flex-shrink:0;">
         <div class="logo-text-codepen" style="font-family:'Inter',system-ui,sans-serif; font-weight:900; font-size:1.05rem; letter-spacing:-0.04em; line-height:1; color:#0d0d10; white-space:nowrap;">
@@ -104,8 +90,17 @@
         <!-- LEFT: Text Content -->
         <div class="hero-left">
 
-          <!-- Desktop scroll-trigger ghost (invisible, used by JS to detect hero position) -->
-          <div class="hero-brand-lockup hero-brand-lockup--ghost" id="heroBrandLockup" style="animation-delay: 0s;"></div>
+          <!-- Desktop-only hero brand lockup (crest + name + tagline in same row) -->
+          <div class="hero-brand-lockup hero-slide-in" id="heroBrandLockup" style="animation-delay: 0s;">
+            <div class="hero-brand-top">
+              <img src="assets/logo.jpg" alt="Nalanda High School Crest" class="hero-brand-crest">
+              <span class="hero-brand-name">Nalanda High School</span>
+              <div class="hero-brand-tagline">
+                <span class="hero-badge-dot"></span>
+                Trusted School Since <span style="color: #ff5a5f; font-weight: 700;">1980</span> &bull; Nizamabad
+              </div>
+            </div>
+          </div>
 
           <!-- Eyebrow badge (mobile only — hidden on desktop) -->
           <div class="hero-badge hero-slide-in hero-badge-mobile-only" style="animation-delay: 0.1s;">

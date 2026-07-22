@@ -5818,41 +5818,46 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
                 box-shadow 0.35s ease !important;
   }
 
-  /* ── HERO STATE: Full-width pill — brand lockup LEFT, nav RIGHT ── */
+  /* 1) HERO STATE: Compact 630px pill centered on screen */
   .header-curved.header-logo-hidden {
-    width: min(96%, 1100px) !important;
-    max-width: 1100px !important;
-    padding: 0.5rem 1.1rem !important;
+    width: min(92%, 630px) !important;
+    max-width: 630px !important;
+    padding: 0.45rem 1rem !important;
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
   }
 
-  /* Show hero brand (crest + name + tagline) in hero state */
-  .header-curved.header-logo-hidden .header-hero-brand {
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.75rem !important;
-    text-decoration: none !important;
-    flex-shrink: 0 !important;
-  }
-
-  /* Hide small logo in hero state */
   .header-curved.header-logo-hidden .logo {
     display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    transition: opacity 0.35s ease, width 0.35s ease, margin 0.35s ease !important;
   }
 
   .header-curved.header-logo-hidden .nav-container-curved {
     width: 100% !important;
     justify-content: space-between !important;
-    align-items: center !important;
+    gap: 0.75rem !important;
   }
 
   .header-curved.header-logo-hidden .nav-links-curved {
-    gap: 1.3rem !important;
+    margin: 0 !important;
+    gap: 1.15rem !important;
   }
 
-  /* ── SCROLLED STATE: Compact pill — small logo LEFT, nav RIGHT ── */
+  /* Desktop-only outline for "Shaping" in hero heading */
+  .hero-h1-light {
+    -webkit-text-stroke: 1.5px #ffffff !important;
+    text-stroke: 1.5px #ffffff !important;
+    paint-order: stroke fill !important;
+  }
+
+  /* 2) SCROLLED STATE: Expanded pill showing Logo Crest + Name on left */
   .header-curved:not(.header-logo-hidden) {
     width: min(88%, 920px) !important;
     padding: 0.55rem 1.1rem !important;
@@ -5861,81 +5866,20 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     transform: translateX(-50%) !important;
   }
 
-  /* Hide hero brand in scrolled state */
-  .header-curved:not(.header-logo-hidden) .header-hero-brand {
-    display: none !important;
-  }
-
-  /* Show small logo in scrolled state */
   .header-curved:not(.header-logo-hidden) .logo {
     opacity: 1 !important;
-    display: flex !important;
+    width: auto !important;
+    margin-right: 0.5rem !important;
+    transition: opacity 0.35s ease, width 0.35s ease, margin 0.35s ease !important;
   }
 
   .header-curved:not(.header-logo-hidden) .nav-container-curved {
     justify-content: space-between !important;
   }
-
-  /* Hero brand crest image */
-  .header-hero-crest {
-    width: 44px !important;
-    height: 44px !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;
-    border: 2px solid rgba(255, 255, 255, 0.85) !important;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.12) !important;
-    flex-shrink: 0 !important;
-  }
-
-  .header-hero-text {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 0.15rem !important;
-  }
-
-  .header-hero-name {
-    font-family: 'Inter', system-ui, sans-serif !important;
-    font-size: 1rem !important;
-    font-weight: 900 !important;
-    letter-spacing: -0.03em !important;
-    color: #0d0d10 !important;
-    line-height: 1 !important;
-    white-space: nowrap !important;
-  }
-
-  .header-hero-tagline {
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.35rem !important;
-    font-family: 'Inter', sans-serif !important;
-    font-size: 0.72rem !important;
-    font-weight: 600 !important;
-    color: #5c5a55 !important;
-    white-space: nowrap !important;
-  }
-
-  /* Ghost scroll trigger — no size on desktop */
-  .hero-brand-lockup--ghost {
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-  }
 }
 
-/* header-hero-brand: hidden by default, shown in desktop hero state only */
-.header-hero-brand {
-  display: none !important;
-}
-
-/* Desktop-only outline for Shaping in hero heading */
-@media (min-width: 769px) {
-  .hero-h1-light {
-    -webkit-text-stroke: 1.5px #ffffff !important;
-    text-stroke: 1.5px #ffffff !important;
-    paint-order: stroke fill !important;
-  }
+.logo {
+  transition: opacity 0.35s ease, width 0.35s ease !important;
 }
 
 /* --- Desktop: gap above Academic Foundation card & Expert Faculty card --- */
