@@ -5806,107 +5806,51 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     display: none !important;
   }
 
-  /* --- DESKTOP NAVBAR LAYOUT (IntegratedBio Split Layout in Hero, Centered Pill on Scroll) --- */
-  
-  /* 1) HERO STATE (at page top): Logo on Far Left, Nav Links + Button in Floating Right Pill */
-  .header-curved:not(.header-scrolled) {
-    top: 1.25rem !important;
+  /* --- ANURAG UNIVERSITY STYLE WHITE STADIUM FLOATING NAVBAR --- */
+  .header-curved {
+    top: 1rem !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-    width: min(92%, 1280px) !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    width: min(92%, 980px) !important;
+    max-width: 980px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    padding: 0.45rem 0.6rem 0.45rem 1.8rem !important;
+    border-radius: 999px !important;
+    box-shadow: 0 10px 32px rgba(13, 13, 16, 0.12) !important;
+    z-index: 1000 !important;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
 
-  .header-curved:not(.header-scrolled) .nav-container-curved {
+  .nav-container-curved {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important;
   }
 
-  .header-curved:not(.header-scrolled) .logo {
+  .nav-links-curved {
     display: flex !important;
     align-items: center !important;
-    gap: 0.65rem !important;
-    opacity: 1 !important;
-    text-decoration: none !important;
-  }
-
-  /* Right-side curved floating pill (About, Academics, Facilities, Reviews, Contact + Enquire Now) */
-  .header-curved:not(.header-scrolled) .nav-pill-right {
-    display: flex !important;
-    align-items: center !important;
-    gap: 1.25rem !important;
-    background: rgba(255, 255, 255, 0.88) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
-    border: 1px solid rgba(0, 0, 0, 0.08) !important;
-    padding: 0.35rem 0.4rem 0.35rem 1.25rem !important;
-    border-radius: 999px !important;
-    box-shadow: 0 4px 20px rgba(13, 13, 16, 0.06) !important;
-    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  }
-
-  .header-curved:not(.header-scrolled) .nav-links-curved {
-    display: flex !important;
-    align-items: center !important;
-    gap: 1.25rem !important;
+    gap: 1.75rem !important;
     margin: 0 !important;
-  }
-
-  /* 2) SCROLLED STATE: Morphs into a Single Centered Floating Glass Pill */
-  .header-curved.header-scrolled {
-    top: 0.85rem !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: min(90%, 940px) !important;
-    background: rgba(255, 255, 255, 0.92) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
-    border: 1px solid rgba(0, 0, 0, 0.08) !important;
-    padding: 0.45rem 1.2rem !important;
-    border-radius: 999px !important;
-    box-shadow: 0 10px 30px rgba(13, 13, 16, 0.12) !important;
-    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  }
-
-  .header-curved.header-scrolled .nav-container-curved {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-  }
-
-  .header-curved.header-scrolled .logo {
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.65rem !important;
-    margin-right: auto !important;
-  }
-
-  .header-curved.header-scrolled .nav-pill-right {
-    display: flex !important;
-    align-items: center !important;
-    gap: 1.25rem !important;
-    background: transparent !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border: none !important;
     padding: 0 !important;
-    box-shadow: none !important;
-    margin-left: auto !important;
+    list-style: none !important;
   }
 
-  .header-curved.header-scrolled .nav-links-curved {
-    display: flex !important;
-    align-items: center !important;
-    gap: 1.25rem !important;
-    margin-right: 1rem !important;
+  .nav-links-curved a {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: #2b2b2b !important;
+    text-decoration: none !important;
+    transition: color 0.25s ease !important;
+  }
+
+  .nav-links-curved a:hover {
+    color: #c51f33 !important;
   }
 
   .nav-right-group {
@@ -6147,41 +6091,65 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   gap: 1rem !important;
 }
 
-.hero-cta-primary {
-  background: #0d0d10 !important;
+/* Signature Crimson Red Stadium Pill Button (Anurag University Style) */
+.contact-pill,
+.hero-cta-primary,
+.btn--primary,
+.contact-form-submit,
+.enquiry-submit-btn,
+.mobile-nav-enquire,
+button[type="submit"] {
+  background: linear-gradient(135deg, #c51f33 0%, #a71828 100%) !important;
   color: #ffffff !important;
-  font-family: 'Inter', sans-serif !important;
-  font-weight: 800 !important;
-  font-size: 0.88rem !important;
-  padding: 0.75rem 1.65rem !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  padding: 0.68rem 1.6rem !important;
   border-radius: 999px !important;
   border: none !important;
-  cursor: pointer !important;
+  box-shadow: 0 6px 20px rgba(197, 31, 51, 0.35) !important;
   display: inline-flex !important;
   align-items: center !important;
+  justify-content: center !important;
   gap: 0.5rem !important;
-  box-shadow: 0 8px 24px rgba(13,13,16,0.22) !important;
-  transition: transform 0.22s, box-shadow 0.22s !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  text-decoration: none !important;
 }
 
-.hero-cta-primary:hover {
-  transform: translateY(-3px) !important;
-  box-shadow: 0 14px 32px rgba(13,13,16,0.32) !important;
+.contact-pill:hover,
+.hero-cta-primary:hover,
+.btn--primary:hover,
+.mobile-nav-enquire:hover,
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #d42237 0%, #b81b2c 100%) !important;
+  box-shadow: 0 10px 28px rgba(197, 31, 51, 0.5) !important;
+  transform: translateY(-2px) scale(1.02) !important;
 }
 
 .hero-cta-ghost {
   background: transparent !important;
   color: #0d0d10 !important;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Outfit', sans-serif !important;
   font-weight: 700 !important;
-  font-size: 0.88rem !important;
-  padding: 0.75rem 1.25rem !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  padding: 0.65rem 1.6rem !important;
   border-radius: 999px !important;
-  border: 1.5px solid var(--line, #dad6c9) !important;
+  border: 2px solid #0d0d10 !important;
   text-decoration: none !important;
   display: inline-flex !important;
   align-items: center !important;
-  transition: background 0.2s, border-color 0.2s !important;
+  transition: all 0.3s ease !important;
+}
+
+.hero-cta-ghost:hover {
+  background: #0d0d10 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
 }
 
 .hero-cta-ghost:hover {
