@@ -8166,6 +8166,35 @@ button[type="submit"].btn--primary:active {
     grid-column: 1 / -1 !important; /* full width for branding */
   }
 
+  .footer-premium-badges {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .footer-badge-chip {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    font-size: 0.74rem !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    padding: 0.35rem 0.75rem !important;
+  }
+
+  .hero-stats {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.5rem 0.75rem !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
   .footer-contact-column {
     display: none !important;
   }
