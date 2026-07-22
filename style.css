@@ -5806,49 +5806,107 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     display: none !important;
   }
 
-  /* --- DESKTOP NAVBAR LAYOUT: Logo & School Name FIRST (Left), Nav Links & Button (Right) --- */
-  .header-curved {
-    top: 1rem !important;
+  /* --- DESKTOP HEADER MECHANICS --- */
+  
+  /* 1) HERO STATE (Top of page): Logo Left (standalone), Floating Pill Right (containing nav links + Enquire Now) */
+  .header-curved:not(.header-scrolled) {
+    top: 1.25rem !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-    width: min(94%, 1120px) !important;
-    max-width: 1120px !important;
-    background: #ffffff !important;
-    border: 1px solid rgba(0, 0, 0, 0.08) !important;
-    padding: 0.45rem 0.8rem 0.45rem 1.25rem !important;
-    border-radius: 999px !important;
-    box-shadow: 0 10px 32px rgba(13, 13, 16, 0.12) !important;
+    width: min(92%, 1280px) !important;
+    max-width: 1280px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
     z-index: 1000 !important;
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
 
-  .nav-container-curved {
+  .header-curved:not(.header-scrolled) .nav-container-curved {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important;
-    gap: 2rem !important;
   }
 
-  /* 1st: Logo Crest & School Name (Left-aligned with distinct gap before nav links) */
-  .logo {
+  .header-curved:not(.header-scrolled) .logo {
     display: flex !important;
     align-items: center !important;
-    gap: 0.75rem !important;
-    margin-right: 3rem !important;
+    gap: 0.65rem !important;
+    margin-right: auto !important;
     text-decoration: none !important;
-    flex-shrink: 0 !important;
   }
 
-  /* 2nd: Navigation Links + Enquire Now Button (Right-aligned) */
-  .header-right-nav {
+  /* Right-side curved white floating pill in Hero state */
+  .header-curved:not(.header-scrolled) .nav-pill-right {
     display: flex !important;
     align-items: center !important;
     gap: 1.5rem !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    padding: 0.4rem 0.5rem 0.4rem 1.6rem !important;
+    border-radius: 999px !important;
+    box-shadow: 0 10px 32px rgba(13, 13, 16, 0.12) !important;
+    margin-left: auto !important;
+    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .header-curved:not(.header-scrolled) .nav-links-curved {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  /* 2) SCROLLED STATE: Both Logo and Nav Pill Morph into a Single Centered Floating Pill */
+  .header-curved.header-scrolled {
+    top: 0.85rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: min(92%, 1060px) !important;
+    max-width: 1060px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    padding: 0.45rem 0.6rem 0.45rem 1.25rem !important;
+    border-radius: 999px !important;
+    box-shadow: 0 12px 36px rgba(13, 13, 16, 0.14) !important;
+    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    z-index: 1000 !important;
+  }
+
+  .header-curved.header-scrolled .nav-container-curved {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+
+  .header-curved.header-scrolled .logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    margin-right: auto !important;
+    text-decoration: none !important;
+  }
+
+  .header-curved.header-scrolled .nav-pill-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
     margin-left: auto !important;
   }
 
-  .nav-links-curved {
+  .header-curved.header-scrolled .nav-links-curved {
     display: flex !important;
     align-items: center !important;
     gap: 1.5rem !important;
