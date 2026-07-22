@@ -5926,6 +5926,26 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   transition: opacity 0.35s ease, width 0.35s ease !important;
 }
 
+.logo-img {
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 2.5px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+  transition: transform 0.3s ease !important;
+}
+
+.logo-text-codepen {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.85rem !important;
+  letter-spacing: -0.04em !important;
+  line-height: 1 !important;
+  color: #0d0d10 !important;
+  white-space: nowrap !important;
+}
+
 /* --- Desktop: gap above Academic Foundation card & Expert Faculty card --- */
 @media (min-width: 769px) {
   .col-left .stack-block {
