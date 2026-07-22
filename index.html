@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2026_single_logo_hero_redesign">
+  <link rel="stylesheet" href="style.css?v=2026_integrated_bio_split_nav">
   <!-- Lottie Web Animation Player -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
@@ -24,8 +24,8 @@
   <div class="grain"></div>
 
 
-    <!-- Header Navigation (Curved Floating Pill Shape) -->
-  <header class="header nav header-curved" style="padding-top:0.55rem !important; padding-bottom:0.55rem !important; padding-left:1rem !important; padding-right:1rem !important;">
+    <!-- Header Navigation (IntegratedBio-style split floating navbar) -->
+  <header class="header nav header-curved">
     <div class="nav-container-curved">
       <a href="#home" class="logo" aria-label="Nalanda High School Home" style="text-decoration:none;">
         <img class="logo-img" src="assets/logo.jpg" alt="Nalanda High School Crest" style="width:34px; height:34px; border-radius:50%; object-fit:cover; flex-shrink:0;">
@@ -34,22 +34,25 @@
         </div>
       </a>
 
-      <ul class="nav-links nav-links-curved">
-        <li><a href="#about">About</a></li>
-        <li><a href="#academics">Academics</a></li>
-        <li><a href="#facilities">Facilities</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <!-- Right Nav Floating Pill -->
+      <div class="nav-pill-right">
+        <ul class="nav-links nav-links-curved">
+          <li><a href="#about">About</a></li>
+          <li><a href="#academics">Academics</a></li>
+          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-      <div class="nav-right-group">
-        <button type="button" class="contact-pill btn--open-enquiry">Enquire Now</button>
-        <!-- Hamburger — mobile only -->
-        <button type="button" class="hamburger-btn" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
-          <span class="ham-bar"></span>
-          <span class="ham-bar"></span>
-          <span class="ham-bar"></span>
-        </button>
+        <div class="nav-right-group">
+          <button type="button" class="contact-pill btn--open-enquiry">Enquire Now</button>
+          <!-- Hamburger — mobile only -->
+          <button type="button" class="hamburger-btn" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -92,7 +95,6 @@
 
           <!-- Eyebrow badge -->
           <div class="hero-badge hero-slide-in" style="animation-delay: 0.1s;">
-            <span class="hero-badge-dot"></span>
             Trusted School Since <span style="color: #ff5a5f; font-weight: 700;">1980</span> &bull; Nizamabad
           </div>
 

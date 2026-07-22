@@ -5801,46 +5801,112 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 }
 
 @media (min-width: 769px) {
-
-  /* --- DESKTOP NAVBAR PILL LAYOUT --- */
-  .header-curved {
-    top: 0.9rem !important;
-    width: min(92%, 960px) !important;
-    max-width: 960px !important;
-    padding: 0.55rem 1.25rem !important;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
-    transition: background-color 0.35s ease, box-shadow 0.35s ease !important;
+  /* Hide Trusted School badge on desktop view */
+  .hero-badge {
+    display: none !important;
   }
 
-  .nav-container-curved {
+  /* --- DESKTOP NAVBAR LAYOUT (IntegratedBio Split Layout in Hero, Centered Pill on Scroll) --- */
+  
+  /* 1) HERO STATE (at page top): Logo on Far Left, Nav Links + Button in Floating Right Pill */
+  .header-curved:not(.header-scrolled) {
+    top: 1.25rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: min(92%, 1280px) !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .header-curved:not(.header-scrolled) .nav-container-curved {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important;
   }
 
-  /* Left-aligned logo & brand name */
-  .logo {
+  .header-curved:not(.header-scrolled) .logo {
     display: flex !important;
     align-items: center !important;
     gap: 0.65rem !important;
     opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
-    width: auto !important;
-    margin-right: auto !important;
     text-decoration: none !important;
   }
 
-  /* Right-aligned nav links & Enquire button */
-  .nav-links-curved {
+  /* Right-side curved floating pill (About, Academics, Facilities, Reviews, Contact + Enquire Now) */
+  .header-curved:not(.header-scrolled) .nav-pill-right {
     display: flex !important;
     align-items: center !important;
     gap: 1.25rem !important;
+    background: rgba(255, 255, 255, 0.88) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    padding: 0.35rem 0.4rem 0.35rem 1.25rem !important;
+    border-radius: 999px !important;
+    box-shadow: 0 4px 20px rgba(13, 13, 16, 0.06) !important;
+    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .header-curved:not(.header-scrolled) .nav-links-curved {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    margin: 0 !important;
+  }
+
+  /* 2) SCROLLED STATE: Morphs into a Single Centered Floating Glass Pill */
+  .header-curved.header-scrolled {
+    top: 0.85rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: min(90%, 940px) !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    padding: 0.45rem 1.2rem !important;
+    border-radius: 999px !important;
+    box-shadow: 0 10px 30px rgba(13, 13, 16, 0.12) !important;
+    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .header-curved.header-scrolled .nav-container-curved {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+
+  .header-curved.header-scrolled .logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    margin-right: auto !important;
+  }
+
+  .header-curved.header-scrolled .nav-pill-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
     margin-left: auto !important;
-    margin-right: 1.25rem !important;
+  }
+
+  .header-curved.header-scrolled .nav-links-curved {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    margin-right: 1rem !important;
   }
 
   .nav-right-group {
