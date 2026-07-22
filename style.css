@@ -7969,6 +7969,30 @@ button[type="submit"].btn--primary:active {
     padding-block: 3.5rem !important;
   }
 
+  .leadership-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.75rem !important;
+    width: 100% !important;
+    margin-top: 2rem !important;
+  }
+
+  .leadership-card {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 1.5rem 1rem !important;
+  }
+
+  .leadership-img-wrapper {
+    width: 100% !important;
+    max-width: 220px !important;
+    height: 256px !important;
+    margin-bottom: 1rem !important;
+  }
+
   .about-grid,
   .about-two-col {
     grid-template-columns: 1fr !important;
