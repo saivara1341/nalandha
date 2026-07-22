@@ -7862,39 +7862,85 @@ button[type="submit"].btn--primary:active {
     display: inline-flex !important;
   }
 
+  /* Mobile Arched Pure CSS Banner for Trusted School Badge */
+  .school-banner,
   .hero-badge {
-    display: inline-block !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     position: relative !important;
-    text-align: center !important;
+    background-color: #fffdf9 !important;
+    padding: 8px 30px !important;
+    border-radius: 4px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+    border: 3px solid #dcb564 !important;
     align-self: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 1.25rem !important;
-    padding: 6px 20px !important;
-    background: linear-gradient(135deg, #fffdf9 0%, #f3ede0 100%) !important;
-    color: #3a2d13 !important;
-    font-family: 'Outfit', sans-serif !important;
-    font-size: 0.78rem !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.03em !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
-
-    /* Arched SVG Gold Border Image */
-    border: 10px solid transparent !important;
-    border-image-source: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none" stroke="%23d4af37" stroke-width="2"><path d="M20,2 C10,2 8,15 2,20 C8,25 10,38 20,38 L100,38 C110,38 112,25 118,20 C112,15 110,2 100,2 Z"/></svg>') !important;
-    border-image-slice: 12 25 12 25 !important;
-    border-image-repeat: stretch !important;
+    max-width: 90% !important;
+    box-sizing: border-box !important;
   }
 
-  .hero-badge::after {
-    content: '' !important;
+  /* Elegant Arched Left Cap */
+  .school-banner::before {
+    content: "" !important;
     position: absolute !important;
-    top: 2px !important;
-    left: 2px !important;
-    right: 2px !important;
-    bottom: 2px !important;
-    border: 1px solid rgba(212, 175, 55, 0.4) !important;
-    pointer-events: none !important;
+    left: -1px !important;
+    top: -3px !important;
+    bottom: -3px !important;
+    width: 20px !important;
+    background-color: #fffdf9 !important;
+    border: 3px solid #dcb564 !important;
+    border-right: none !important;
+    border-radius: 50% 0 0 50% / 50% 0 0 50% !important;
+    transform: scaleX(0.7) translateX(-10px) !important;
+  }
+
+  /* Elegant Arched Right Cap */
+  .school-banner::after {
+    content: "" !important;
+    position: absolute !important;
+    right: -1px !important;
+    top: -3px !important;
+    bottom: -3px !important;
+    width: 20px !important;
+    background-color: #fffdf9 !important;
+    border: 3px solid #dcb564 !important;
+    border-left: none !important;
+    border-radius: 0 50% 50% 0 / 0 50% 50% 0 !important;
+    transform: scaleX(0.7) translateX(10px) !important;
+  }
+
+  /* Inner Gold Thin Accent Box */
+  .banner-inner-border {
+    border: 1px solid #ebdcb9 !important;
+    padding: 5px 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+  }
+
+  /* Typography styling */
+  .banner-text {
+    color: #31281e !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 0.7rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+  }
+
+  /* Highlighted red color for the year */
+  .highlight-year {
+    color: #ff5e62 !important;
+    font-weight: 900 !important;
+  }
+
+  /* Bullet separator point */
+  .bullet-separator {
+    margin: 0 6px !important;
+    color: #31281e !important;
   }
 
   .hero-h1-light {
