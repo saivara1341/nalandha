@@ -7862,72 +7862,49 @@ button[type="submit"].btn--primary:active {
     display: inline-flex !important;
   }
 
-  /* Mobile Arched Pure CSS Banner for Trusted School Badge */
+  /* Mobile Aesthetic Golden Islamic Frame Text Box for Trusted School Badge */
   .school-banner,
   .hero-badge {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     position: relative !important;
-    background-color: #fffdf9 !important;
-    padding: 8px 30px !important;
-    border-radius: 4px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
-    border: 3px solid #dcb564 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     align-self: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 1.25rem !important;
-    max-width: 90% !important;
+    max-width: 95% !important;
     box-sizing: border-box !important;
   }
 
-  /* Elegant Arched Left Cap */
-  .school-banner::before {
-    content: "" !important;
-    position: absolute !important;
-    left: -1px !important;
-    top: -3px !important;
-    bottom: -3px !important;
-    width: 20px !important;
-    background-color: #fffdf9 !important;
-    border: 3px solid #dcb564 !important;
-    border-right: none !important;
-    border-radius: 50% 0 0 50% / 50% 0 0 50% !important;
-    transform: scaleX(0.7) translateX(-10px) !important;
-  }
-
-  /* Elegant Arched Right Cap */
+  .school-banner::before,
   .school-banner::after {
-    content: "" !important;
-    position: absolute !important;
-    right: -1px !important;
-    top: -3px !important;
-    bottom: -3px !important;
-    width: 20px !important;
-    background-color: #fffdf9 !important;
-    border: 3px solid #dcb564 !important;
-    border-left: none !important;
-    border-radius: 0 50% 50% 0 / 0 50% 50% 0 !important;
-    transform: scaleX(0.7) translateX(10px) !important;
+    display: none !important;
   }
 
-  /* Inner Gold Thin Accent Box */
   .banner-inner-border {
-    border: 1px solid #ebdcb9 !important;
-    padding: 5px 12px !important;
+    border: none !important;
+    padding: 10px 34px !important;
     display: flex !important;
     align-items: center !important;
+    justify-content: center !important;
     white-space: nowrap !important;
+    position: relative !important;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" preserveAspectRatio="none"><defs><linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%23bf953f"/><stop offset="25%" stop-color="%23fcf6ba"/><stop offset="50%" stop-color="%23b38728"/><stop offset="75%" stop-color="%23fbf5b7"/><stop offset="100%" stop-color="%23aa771c"/></linearGradient><filter id="shadow" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="%23000" flood-opacity="0.25"/></filter></defs><path d="M 35 6 C 25 6, 20 15, 12 18 C 4 22, 0 25, 0 30 C 0 35, 4 38, 12 42 C 20 45, 25 54, 35 54 L 365 54 C 375 54, 380 45, 388 42 C 396 38, 400 35, 400 30 C 400 25, 396 22, 388 18 C 380 15, 375 6, 365 6 Z" fill="%23fffdf8" stroke="url(%23goldGrad)" stroke-width="3" filter="url(%23shadow)"/><path d="M 38 10 C 30 10, 25 17, 18 20 C 10 24, 6 26, 6 30 C 6 34, 10 36, 18 40 C 25 43, 30 50, 38 50 L 362 50 C 370 50, 375 43, 382 40 C 390 36, 394 34, 394 30 C 394 26, 390 24, 382 20 C 375 17, 370 10, 362 10 Z" fill="none" stroke="url(%23goldGrad)" stroke-width="1" stroke-dasharray="6,3"/><polygon points="12,30 15,26 19,30 15,34" fill="url(%23goldGrad)"/><polygon points="388,30 385,26 381,30 385,34" fill="url(%23goldGrad)"/></svg>') no-repeat center center / 100% 100% !important;
+    filter: drop-shadow(0 6px 16px rgba(0,0,0,0.18)) !important;
   }
 
   /* Typography styling */
   .banner-text {
-    color: #31281e !important;
+    color: #3a2d13 !important;
     font-family: 'Outfit', sans-serif !important;
-    font-size: 0.7rem !important;
+    font-size: 0.72rem !important;
     font-weight: 800 !important;
-    letter-spacing: 1px !important;
+    letter-spacing: 1.2px !important;
     text-transform: uppercase !important;
   }
 
@@ -7939,8 +7916,8 @@ button[type="submit"].btn--primary:active {
 
   /* Bullet separator point */
   .bullet-separator {
-    margin: 0 6px !important;
-    color: #31281e !important;
+    margin: 0 8px !important;
+    color: #aa771c !important;
   }
 
   .hero-h1-light {
