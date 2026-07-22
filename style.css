@@ -7863,15 +7863,38 @@ button[type="submit"].btn--primary:active {
   }
 
   .hero-badge {
-    display: inline-flex !important;
-    font-size: 0.72rem !important;
-    padding: 0.4rem 0.95rem 0.4rem 0.85rem !important;
-    border-radius: 999px !important;
+    display: inline-block !important;
+    position: relative !important;
+    text-align: center !important;
     align-self: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 1.25rem !important;
-    box-shadow: 0 4px 16px rgba(13, 13, 16, 0.09) !important;
+    padding: 6px 20px !important;
+    background: linear-gradient(135deg, #fffdf9 0%, #f3ede0 100%) !important;
+    color: #3a2d13 !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.03em !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+
+    /* Arched SVG Gold Border Image */
+    border: 10px solid transparent !important;
+    border-image-source: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none" stroke="%23d4af37" stroke-width="2"><path d="M20,2 C10,2 8,15 2,20 C8,25 10,38 20,38 L100,38 C110,38 112,25 118,20 C112,15 110,2 100,2 Z"/></svg>') !important;
+    border-image-slice: 12 25 12 25 !important;
+    border-image-repeat: stretch !important;
+  }
+
+  .hero-badge::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 2px !important;
+    left: 2px !important;
+    right: 2px !important;
+    bottom: 2px !important;
+    border: 1px solid rgba(212, 175, 55, 0.4) !important;
+    pointer-events: none !important;
   }
 
   .hero-h1-light {
