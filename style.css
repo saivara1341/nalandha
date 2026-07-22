@@ -5806,48 +5806,50 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     display: none !important;
   }
 
-  /* --- DYNAMIC NAVBAR PILL TRANSITION (top controlled by JS) --- */
+  /* --- DESKTOP NAVBAR PILL LAYOUT --- */
   .header-curved {
-    transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-                max-width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-                padding 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-                top 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-                left 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-                background-color 0.35s ease,
-                box-shadow 0.35s ease !important;
-  }
-
-  /* 1) HERO STATE: Compact 630px pill centered on screen */
-  .header-curved.header-logo-hidden {
-    width: min(92%, 630px) !important;
-    max-width: 630px !important;
-    padding: 0.45rem 1rem !important;
+    top: 0.9rem !important;
+    width: min(92%, 960px) !important;
+    max-width: 960px !important;
+    padding: 0.55rem 1.25rem !important;
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
+    transition: background-color 0.35s ease, box-shadow 0.35s ease !important;
   }
 
-  .header-curved.header-logo-hidden .logo {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-    width: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    transition: opacity 0.35s ease, width 0.35s ease, margin 0.35s ease !important;
-  }
-
-  .header-curved.header-logo-hidden .nav-container-curved {
-    width: 100% !important;
+  .nav-container-curved {
+    display: flex !important;
+    align-items: center !important;
     justify-content: space-between !important;
-    gap: 0.75rem !important;
+    width: 100% !important;
   }
 
-  .header-curved.header-logo-hidden .nav-links-curved {
-    margin: 0 !important;
-    gap: 1.15rem !important;
+  /* Left-aligned logo & brand name */
+  .logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    width: auto !important;
+    margin-right: auto !important;
+    text-decoration: none !important;
+  }
+
+  /* Right-aligned nav links & Enquire button */
+  .nav-links-curved {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    margin-left: auto !important;
+    margin-right: 1.25rem !important;
+  }
+
+  .nav-right-group {
+    display: flex !important;
+    align-items: center !important;
   }
 
   /* Desktop-only outline for "Shaping" in hero heading */
@@ -5855,26 +5857,6 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
     -webkit-text-stroke: 1.5px #ffffff !important;
     text-stroke: 1.5px #ffffff !important;
     paint-order: stroke fill !important;
-  }
-
-  /* 2) SCROLLED STATE: Expanded pill showing Logo Crest + Name on left */
-  .header-curved:not(.header-logo-hidden) {
-    width: min(88%, 920px) !important;
-    padding: 0.55rem 1.1rem !important;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
-  }
-
-  .header-curved:not(.header-logo-hidden) .logo {
-    opacity: 1 !important;
-    width: auto !important;
-    margin-right: 0.5rem !important;
-    transition: opacity 0.35s ease, width 0.35s ease, margin 0.35s ease !important;
-  }
-
-  .header-curved:not(.header-logo-hidden) .nav-container-curved {
-    justify-content: space-between !important;
   }
 }
 
