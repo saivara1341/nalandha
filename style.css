@@ -7791,13 +7791,14 @@ button[type="submit"].btn--primary:active {
   }
 
   .hero-badge {
+    display: inline-flex !important;
     font-size: 0.72rem !important;
-    padding: 0.4rem 0.95rem 0.4rem 0.65rem !important;
-    border-radius: 0 14px 14px 0 !important;
-    align-self: flex-start !important;
-    margin-left: -1.25rem !important;
+    padding: 0.4rem 0.95rem 0.4rem 0.85rem !important;
+    border-radius: 999px !important;
+    align-self: center !important;
+    margin-left: auto !important;
     margin-right: auto !important;
-    border-left: 4px solid #10b981 !important;
+    margin-bottom: 1.25rem !important;
     box-shadow: 0 4px 16px rgba(13, 13, 16, 0.09) !important;
   }
 
