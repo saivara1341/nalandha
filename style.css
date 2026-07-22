@@ -6058,22 +6058,20 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
 .leadership-img-wrapper {
   width: 100% !important;
   max-width: 240px !important;
-  aspect-ratio: 1 / 1.02 !important;
-  height: auto !important;
-  border-radius: 16px !important;
+  height: 280px !important;
+  border-radius: 18px !important;
   overflow: hidden !important;
   margin-bottom: 1rem !important;
   border: 3px solid #ffffff !important;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12) !important;
-  background: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+  background: #fdfdfd !important;
 }
 
 .leadership-img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  background: #ffffff !important;
+  object-fit: cover !important;
+  object-position: center top !important;
   transition: transform 0.4s ease !important;
 }
 
