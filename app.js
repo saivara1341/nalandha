@@ -61,12 +61,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Modal Dialog Handlers
+// Modal Dialog Handlers & Supabase Integration
 document.addEventListener('DOMContentLoaded', () => {
   const enquiryDialog = document.getElementById('enquiry-dialog');
   const successDialog = document.getElementById('success-dialog');
   const enquiryForm = document.getElementById('enquiry-form');
   const inlineForm = document.getElementById('inline-contact-form');
+
+  // Supabase Client Config
+  const SUPABASE_URL = 'https://xoqpxckowwubeqdtazks.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_Db5k1uOh50NIY-GPvMm0HQ_OMnOz8D7';
+  let supabaseClient = null;
+
+  if (window.supabase && typeof window.supabase.createClient === 'function') {
+    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  }
 
   document.querySelectorAll('.btn--open-enquiry').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -89,8 +98,40 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (enquiryForm) {
-    enquiryForm.addEventListener('submit', (e) => {
+    enquiryForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const submitBtn = enquiryForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn ? submitBtn.textContent : 'Submit Admission Request';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+      }
+
+      const formData = {
+        student_name: document.getElementById('student-name')?.value?.trim() || '',
+        grade: document.getElementById('grade')?.value || '',
+        parent_name: document.getElementById('parent-name')?.value?.trim() || '',
+        phone: document.getElementById('phone')?.value?.trim() || '',
+        email: document.getElementById('email')?.value?.trim() || null,
+        message: document.getElementById('message')?.value?.trim() || null
+      };
+
+      if (supabaseClient) {
+        try {
+          const { error } = await supabaseClient.from('admission_inquiries').insert([formData]);
+          if (error) {
+            console.error('Supabase submission error:', error.message || error);
+          }
+        } catch (err) {
+          console.error('Error submitting form to Supabase:', err);
+        }
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+
       if (enquiryDialog) enquiryDialog.close();
       enquiryForm.reset();
       if (successDialog && typeof successDialog.showModal === 'function') {
@@ -100,8 +141,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (inlineForm) {
-    inlineForm.addEventListener('submit', (e) => {
+    inlineForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const submitBtn = inlineForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn ? submitBtn.textContent : 'Submit Inquiry Request';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+      }
+
+      const formData = {
+        student_name: document.getElementById('c-student-name')?.value?.trim() || '',
+        grade: document.getElementById('c-grade')?.value || '',
+        parent_name: document.getElementById('c-parent-name')?.value?.trim() || '',
+        phone: document.getElementById('c-phone')?.value?.trim() || '',
+        email: null,
+        message: document.getElementById('c-message')?.value?.trim() || null
+      };
+
+      if (supabaseClient) {
+        try {
+          const { error } = await supabaseClient.from('admission_inquiries').insert([formData]);
+          if (error) {
+            console.error('Supabase submission error:', error.message || error);
+          }
+        } catch (err) {
+          console.error('Error submitting inline form to Supabase:', err);
+        }
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+
       inlineForm.reset();
       if (successDialog && typeof successDialog.showModal === 'function') {
         successDialog.showModal();

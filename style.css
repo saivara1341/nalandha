@@ -4958,6 +4958,8 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
   margin: 0 !important;
   width: min(92%, 650px) !important;
   max-width: 650px !important;
+  max-height: calc(100vh - 2rem) !important;
+  max-height: 90vh !important;
   padding: 2.25rem !important;
   border-radius: 28px !important;
   border: 2px solid rgba(255, 255, 255, 0.95) !important;
@@ -4967,6 +4969,30 @@ h1, h2, h3, h4, h5, h6, .headline, .section-title, .logo-title, .logo-subtitle {
               0 24px 60px rgba(13, 13, 16, 0.25) !important;
   color: var(--ink, #0d0d10) !important;
   z-index: 2000 !important;
+  overflow-y: auto !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+#enquiry-dialog,
+#enquiry-dialog *,
+#enquiry-form,
+#enquiry-form * {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+#enquiry-dialog::-webkit-scrollbar,
+#enquiry-dialog *::-webkit-scrollbar,
+#enquiry-form::-webkit-scrollbar,
+#enquiry-form *::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+#enquiry-dialog textarea {
+  resize: none !important;
 }
 
 #enquiry-dialog::backdrop {
