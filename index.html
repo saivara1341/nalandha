@@ -944,22 +944,22 @@
     </form>
   </dialog>
 
-  <!-- Success Toast Dialog -->
-  <dialog id="success-dialog" style="max-width: 420px; text-align: center;">
-    <div class="dialog-header" style="justify-content: flex-end; margin-bottom: 0.5rem;">
+  <!-- Centered Success Toast Modal Dialog -->
+  <dialog id="success-dialog">
+    <div class="dialog-header" style="justify-content: flex-end; margin-bottom: 0.25rem; border-bottom: none !important; padding-bottom: 0 !important;">
       <button type="button" class="dialog-close close-success" aria-label="Close success dialog">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
-    <div style="color: var(--success); margin-bottom: 1rem;">
-      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-inline: auto;">
+    <div style="color: #16a34a; margin-bottom: 1rem; display: flex; justify-content: center;">
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
         <polyline points="22 4 12 14.01 9 11.01"/>
       </svg>
     </div>
-    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);">Inquiry Submitted!</h3>
-    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Thank you for your interest in Nalanda High School. Our admissions coordinator will call you back within 24 hours.</p>
-    <button type="button" class="btn btn--primary close-success w-full">Okay, Got it</button>
+    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--ink);">Inquiry Submitted!</h3>
+    <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem;">Thank you for your interest in Nalanda High School. Our admissions coordinator will call you back within 24 hours.</p>
+    <button type="button" class="btn btn--primary close-success w-full" style="width: 100%; justify-content: center;">Okay, Got it</button>
   </dialog>
 
   <!-- Supabase JS Client SDK -->
